@@ -1,0 +1,31 @@
+.container-promo {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 20px;
+  align-items: left;
+  display: flex;
+  text-align: center;
+  background: #00b7ff;
+  background: linear-gradient(90deg, rgb(0, 143, 199) 0%, rgb(30, 185, 216) 48%, rgba(33, 149, 191, 1) 100%);
+  
+  /* background: #00b7ff;
+  background: linear-gradient(90deg, rgb(185, 30, 30) 0%, rgb(255, 0, 0) 100%, rgb(216, 66, 66) 100%); */
+}
+
+.text-promo {
+  color: #000;
+  padding: 15px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+
+.swiper-promo {
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+}
+

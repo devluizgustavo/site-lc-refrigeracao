@@ -1,0 +1,7 @@
+    .text-container {
+        margin-top: 50px;
+        & p {
+            font-size: 12px;
+            text-align: left;
+        }
+    }

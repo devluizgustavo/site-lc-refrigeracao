@@ -1,0 +1,139 @@
+header {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      z-index: 9999;
+      width: 100%;
+      
+      
+      nav {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            padding: 25px 0;
+            display: flex;
+            padding: 5px;
+            align-items: center;
+            color: #fff;
+      }
+
+      
+      & ul {
+            display: flex;
+            text-align: center;
+            font-size: 15px;
+            list-style: none;
+            cursor: pointer;
+      }
+
+      & li {
+            opacity: 100%;
+            font-size: 14px;
+
+            & a {
+                  text-decoration: none;
+                  color: rgb(255, 255, 255);
+            }
+      }
+}
+
+.content-header {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      
+      & li {
+            list-style: none;
+      }
+}
+
+.shape-inc {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+
+      & a {
+            margin-left: 25px;
+            font-size: 14px;
+            font-weight: 500;
+      }
+}
+
+.shape-contact {
+      margin-left: 500px;
+
+      & a {
+            margin-right: 50px;
+      }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+
+.dropdown {
+  list-style: none;
+  display: flex;
+  gap: 0px;
+}
+
+.dropdown li a {
+      color: white;
+      text-decoration: none;      
+}
+
+.contato {
+      display: none;
+      padding: 15px 30px;
+      border-radius: 1em;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      height: 50px;
+      background: #00b7ff;
+      background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(25, 195, 230, 1) 48%, rgba(33, 149, 191, 1) 100%);
+}
+
+.menu-toggle {
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu .dropdown {
+    all: unset;
+    text-align: center;
+    list-style: none;
+    background-color: #2e2e2e;
+    padding: 0px;
+    position: absolute;
+    right: 75px;
+    top: 75px;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: center;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .dropdown li {
+    padding: 15px;
+}
+
+.menu .dropdown li:active {
+      background: rgb(15, 179, 201);
+      transition: 0 all;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}

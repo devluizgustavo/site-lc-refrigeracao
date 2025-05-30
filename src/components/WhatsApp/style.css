@@ -1,0 +1,26 @@
+.container-whatsapp {
+    position: fixed;
+    z-index: 99999;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    bottom: 25em;
+    right: 20px;
+    cursor: pointer;
+}
+
+.content-whatsapp {
+    background: rgb(55, 167, 20);
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;  
+    align-items: center;
+}
+
+.content-whatsapp a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

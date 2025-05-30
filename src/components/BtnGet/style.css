@@ -1,0 +1,38 @@
+.btnBase {
+  font-size: 12px;
+  padding:15px;
+  width: 55%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  background: #00b7ff;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(25, 195, 230, 1) 48%, rgba(33, 149, 191, 1) 100%);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 25px;
+  opacity: 75%;
+}
+
+.btnMeio {
+  margin: 25px auto;
+  font-size: 12px;
+  padding: 15px;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  background: #00b7ff;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(25, 195, 230, 1) 48%, rgba(33, 149, 191, 1) 100%);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 25px;
+  opacity: 75%;
+}

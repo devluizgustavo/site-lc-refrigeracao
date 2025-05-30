@@ -1,0 +1,62 @@
+.carrosel {
+  text-align: center;
+  color: white;
+  position: sticky;
+  width: 100%;
+}
+
+.hero-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  z-index: 10;
+  width: 75%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.content-text {
+  font-size: 17px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+
+.carrosel-container {
+  margin: 0px auto;
+  border: none;
+  width: 100%;
+}
+
+.carousel-image {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  filter: brightness(0.4);
+  height: 28em;
+}
+
+.hero-text {
+  margin-top: 0px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtext {
+  font-size: 14px;
+  margin: 0;
+
+  & span {
+    font-size: 18px;
+    font-weight: 200;
+  }
+}

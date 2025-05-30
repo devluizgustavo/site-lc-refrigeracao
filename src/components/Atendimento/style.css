@@ -1,0 +1,63 @@
+.ligacao-button {
+    text-align: center;
+    margin: 0;
+    opacity: 75%;
+}
+
+.ligacao-button a {
+  margin: 0px auto;
+  justify-content: center;
+  position: relative;
+  color: white;
+  border-radius: 6px;
+  font-size: 15px;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
+  width: 50%;
+  align-items: center;
+  display: flex;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(25, 195, 230, 1) 48%, rgba(33, 149, 191, 1) 100%);
+}
+
+.ligacao-button a:active {
+    opacity: 100%;    
+}
+
+.box-atend {
+    margin-bottom: 25px;
+    width: 100%;
+    background: rgb(18, 245, 207);
+    padding: 50px;
+    border-radius: 1em;
+    transition: background-color 0.3s;
+     position: relative;
+     background-image: url('../../img/atendimento.jpg');
+     background-size: 450px;
+     color: white;
+     padding: 2rem;
+     overflow: hidden; 
+}
+
+.two {
+    background-image: url('../../img/atendimento-two.jpg');
+    background-size: 450px;
+
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+.box-atend > *:not(.overlay) {
+  position: relative;
+  z-index: 1;
+}
+

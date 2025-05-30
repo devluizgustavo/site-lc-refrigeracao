@@ -1,0 +1,9 @@
+.content-slide {
+    display: flex;
+}
+
+#marcas p {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+}
