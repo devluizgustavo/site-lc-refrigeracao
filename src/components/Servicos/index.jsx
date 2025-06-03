@@ -53,7 +53,7 @@ export default function Servicos() {
                     <ModelServicos NomeEletro={"Manutenção da Máquina de Lavar"} arrayDefeitos={defMaquina} imgEletro={maqLavar} />
                     <ModelServicos NomeEletro={"Manutenção de Geladeira"} arrayDefeitos={defGeladeira} imgEletro={Geladeira} />
                     <ModelServicos NomeEletro={"Manutenção de Micro-Ondas"} arrayDefeitos={defMicroOndas} imgEletro={microOndas} />
-                    <BtnGet className={'btnMeio'} nameButton={'Solicitar Agora'}/>
+                    <BtnGet nameButton={'Solicitar Agora'} Side="center"/>
                 </div>
             </div>
         </section>

@@ -20,6 +20,7 @@ import BtnGet from '../../components/BtnGet';
 export default function Hero() {
     return (
         <section className='carrosel'>
+            <div className="effect"></div>
             <div className="carrosel-container">
                 <Swiper modules={[EffectFade, Autoplay]} autoplay={{ delay: 5000 }} effect='fade' slidesPerView={1} loop={true}>
                     <SwiperSlide>
@@ -37,32 +38,22 @@ export default function Hero() {
                 </Swiper>
             </div>
 
-            <div className='hero-text-overlay'>
-                <div className='content-text'>
-                    <h2 className='hero-text'>Quebrou? <br />Nós consertamos!</h2>
-                    <p className='hero-subtext'>Faça seu orçamento conosco, sem <b>compromisso</b> e sem enrolação.</p>
-                    <div style={{ display: 'flex', gap: '25px' }}>
-                        <h3 style={{ 
-                            fontSize: 11, 
-                            padding: '15px', 
-                            background: 'rgba(0, 0, 0, 0.5)', 
-                            width: '50%', textAlign: 'center',
-                            borderRadius: '5em' }}>
-                            <FaTools style={{ marginRight: '10px' }} size={11} />Garantia Completa</h3>
+                <div className='hero-text-overlay'>
+                    <div className='content-text'>
+                        <h2 className='hero-text'>Quebrou? <br />Nós consertamos!</h2>
+                        <p className='hero-subtext'>Reparos de eletrodomésticos, orçamento sem <b>compromisso</b> e sem enrolação.</p>
+                        <div className='container-ballon'>
+                            <div className="back-ballon">
+                                <p><FaTools style={{ marginRight: '10px' }} size={11} />Garantia Completa</p>
+                            </div>
 
-                        <h3 style={{ 
-                            fontSize: 11, 
-                            padding: '15px', 
-                            background: 'rgba(0, 0, 0, 0.5)',
-                            width: '35%', textAlign: 'center', 
-                            borderRadius: '5em' }}>
-                                <FaRegClock style={{ marginRight: '10px' }} size={11} />24 Horas</h3>
+                             <div className="back-ballon">
+                                 <p><FaRegClock style={{ marginRight: '10px' }} size={11} />24 Horas</p>
+                             </div>
+                        </div>
+                        <BtnGet nameButton={'Fale Conosco'} />
                     </div>
                 </div>
-                <BtnGet nameButton={'Fale Conosco'} className={'btnBase'} />
-            </div>
-
-
         </section>
     )
 }

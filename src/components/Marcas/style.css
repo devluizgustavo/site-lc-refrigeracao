@@ -6,4 +6,23 @@
     margin: 0 auto;
     text-align: center;
     width: 75%;
+    font-size: 14px;
+}
+
+@media (min-width: 320px) {
+    #marcas p {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    #marcas p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1280px) {
+    #marcas p {
+        font-size: 17px;
+    }
 }

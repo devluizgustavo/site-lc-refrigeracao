@@ -5,16 +5,14 @@ import { EffectFade, Autoplay } from 'swiper/modules';
 
 import Motor from '../../img/motor.png'
 
-import imgDanger from '../../img/test.jpg'
-
 
 export default function Promocao() {
     const promocoes = [
-        { id: 1, text: '<strong>ESTAMOS COM PROMOÇÃO!</strong>', style: { marginLeft: '20px'} },
+        { id: 1, text: '<strong>ESTAMOS COM PROMOÇÃO!</strong>'},
         { id: 2, text: '<strong>10% de Desconto</strong> na troca do Motor ou Compressor' },
-        { id: 3, text: 'A partir de <strong>R$950,00 á vista</strong>', style: { marginLeft: '18px'}  },
+        { id: 3, text: 'A partir de <strong>R$950,00 á vista</strong>' },
         { id: 4, text: 'Ou <strong>parcelamos</strong> em até <strong>10x de R$1200 S/Juros</strong>' },
-        { id: 5, text: 'Trabalhamos somente com <strong>PEÇAS ORIGINAIS</strong>' },
+        { id: 5, text: 'Trabalhamos somente com <strong>PEÇAS ORIGINAIS</strong>' },    
     ]
 
     return (
@@ -23,7 +21,7 @@ export default function Promocao() {
                 <Swiper
                     loop={true}
                     modules={[Autoplay]}
-                    autoplay={{ delay: 3000 }}
+                    autoplay={{ delay: 1800 }}
                     spaceBetween={20}
                     slidesPerView={1}
                 >

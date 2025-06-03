@@ -17,11 +17,11 @@
 
 .contato-form input,
 .contato-form textarea {
-    padding: 7px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 14px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
 }
 
 
@@ -41,19 +41,19 @@
 }
 
 .contato-title {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-  form {
-    & input {
-      padding: 0px;
-    }
+form {
+  & input {
+    padding: 0px;
   }
+}
 
-  & p {
-    font-size: 12px;
-    text-align: left;
-  }
+& p {
+  font-size: 12px;
+  text-align: left;
+}
 
 .contato-container {
   max-width: 500px;
@@ -64,4 +64,63 @@
   & p {
     text-align: center;
   }
+}
+
+@media (min-width: 320px) {
+  .contato-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    text-align: center;
+
+    & h2 {
+      font-size: 17px;
+    }
+
+    & p {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+
+  .contato-form select {
+    font-size: 12px !important;
+  }
+
+  .contato-form input,
+  .contato-form textarea {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contato-container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 40px 50px;
+    text-align: center;
+
+    & p {
+      text-align: center;
+      font-size: 17px;
+    }
+  }
+
+  .contato-title {
+    font-size: 20px;
+  }
+
+  .contato-form input,
+  .contato-form textarea {
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+  }
+
 }

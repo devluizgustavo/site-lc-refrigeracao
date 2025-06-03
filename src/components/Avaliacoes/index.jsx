@@ -1,8 +1,4 @@
 
-const styleAvalia = {
-    padding: '15px',
-    width: '50%'
-}
 
 export default function Avaliacoes() {
     return (

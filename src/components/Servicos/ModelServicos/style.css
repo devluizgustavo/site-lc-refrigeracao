@@ -1,7 +1,134 @@
     .text-container {
         margin-top: 50px;
+
         & p {
             font-size: 12px;
             text-align: left;
+        }
+    }
+
+    .styleLi {
+        display: block;
+        margin: 0 auto;
+        font-size: 15px;
+        text-align: left;
+        justify-content: center;
+        align-items: left;
+        gap: 25px;
+        width: 50%
+    }
+
+    .img-style-servs {
+        border-radius: 50%;
+        height: 250px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .title-defs {
+        font-size: 17px;
+        color: #00b7ff;
+    }
+
+    @media (min-width: 320px) {
+        .styleLi {
+            font-size: 12px;
+            width: 75%;
+        }
+    }
+
+
+    @media (min-width: 375px) {
+
+        .text-container {
+            font-size: 14px;
+        }
+
+        .content-defs .title-defs {
+            font-size: 15px !important;
+        }
+
+        .styleLi {
+            width: 80%;
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .text-container {
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+
+            & hr {
+                display: flex;
+                justify-items: center;
+                margin: 25px;
+            }
+        }
+
+        .styleLi {
+            display: block;
+            font-size: 15px;
+            width: 75%;
+            justify-content: left;
+
+            & li {
+                text-align: left;
+            }
+        }
+
+        .img-style-servs {
+            height: 200px;
+            margin-top: 25px;
+            align-items: left;
+            display: flex;
+        }
+
+        .title-defs {
+            display: block;
+        }
+
+        .content-defs {
+            margin: 25px auto;
+            justify-content: center;
+        }
+
+        .name-equip {
+            text-align: left;
+            width: 75%;
+        }
+
+        .content-img-equip {
+            margin: 0;
+            padding: 0;
+            width: 50%
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .text-container {
+            margin: 0px 250px;
+        }
+
+        .img-style-servs {
+            height: 250px;
+            margin-top: 25px;
+            align-items: left;
+            display: flex;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-style-servs:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .title-defs {
+            font-size: 22px;
+        }
+
+        .styleLi {
+            font-size: 17px;
+            align-items: left;
         }
     }

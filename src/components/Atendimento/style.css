@@ -1,7 +1,7 @@
 .ligacao-button {
-    text-align: center;
-    margin: 0;
-    opacity: 75%;
+  text-align: center;
+  margin: 0;
+  opacity: 75%;
 }
 
 .ligacao-button a {
@@ -22,42 +22,116 @@
 }
 
 .ligacao-button a:active {
-    opacity: 100%;    
+  opacity: 100%;
 }
 
 .box-atend {
-    margin-bottom: 25px;
-    width: 100%;
-    background: rgb(18, 245, 207);
-    padding: 50px;
-    border-radius: 1em;
-    transition: background-color 0.3s;
-     position: relative;
-     background-image: url('../../img/atendimento.jpg');
-     background-size: 450px;
-     color: white;
-     padding: 2rem;
-     overflow: hidden; 
+  margin-bottom: 25px;
+  width: 100%;
+  background: rgb(18, 245, 207);
+  padding: 50px;
+  border-radius: 1em;
+  transition: background-color 0.3s;
+  position: relative;
+  background-image: url('../../img/atendimento.jpg');
+  background-size: 125%;
+  color: white;
+  padding: 2rem;
+  overflow: hidden;
 }
 
 .two {
-    background-image: url('../../img/atendimento-two.jpg');
-    background-size: 450px;
+  background-image: url('../../img/atendimento-two.jpg');
+  background-size: 125%;
 
 }
 
 
 .overlay {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
-.box-atend > *:not(.overlay) {
+.box-atend>*:not(.overlay) {
   position: relative;
   z-index: 1;
 }
 
+@media (min-width: 320px) {
+  .box-atend {
+    height: 180px;
+  }
+
+  .icon-atend {
+    height: 25px;
+  }
+
+  .number-phone {
+    font-size: 14px;
+  }
+
+  .btn-mensagem {
+    font-size: 10px !important;
+    top: 0;
+    margin: 0;
+    width: 75% !important;
+    padding: 5px 0px!important;
+  }
+
+  .canal-atendimento-h3 {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 375px) {
+  .box-atend {
+    background-size: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .box-atend {
+    background-size: 120%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .flexContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 110px;
+    margin: 25px auto;
+    width: 75%;
+  }
+
+  .box-atend {
+    margin-bottom: 25px;
+    width: 100%;
+    background: rgb(18, 245, 207);
+    padding: 50px;
+    border-radius: 1em;
+    transition: background-color 0.3s;
+    position: relative;
+    background-image: url('../../img/atendimento.jpg');
+    background-size: 150%;
+    color: white;
+    padding: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .two {
+    background-image: url('../../img/atendimento-two.jpg');
+    background-size: 200%;
+  }
+
+  .box-atend:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
