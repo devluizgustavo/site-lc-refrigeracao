@@ -1,14 +1,14 @@
-import Hero from './components/Hero';
-import About from './components/About';
-import Forms from './components/Forms';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Marcas from './components/Marcas';
-import Servicos from './components/Servicos';
-import Promocao from './components/Promocao';
-import WhatsApp from './components/WhatsApp';
-import Atendimento from './components/Atendimento';
-import Avalicaoes from './components/Avaliacoes';
+import Hero from './components/Hero/index.tsx';
+import About from './components/About/index.tsx';
+import Forms from './components/Forms/index.tsx';
+import Header from './components/Header/index.tsx';
+import Footer from './components/Footer/index.tsx';
+import Marcas from './components/Marcas/index.tsx';
+import Servicos from './components/Servicos/index.tsx';
+import WhatsApp from './components/WhatsApp/index.tsx';
+import Promocao from './components/Promocao/index.tsx';
+import Atendimento from './components/Atendimento/index.tsx';
+import Avalicaoes from './components/Avaliacoes/index.tsx';
 
 import './components/Header/style.css';
 

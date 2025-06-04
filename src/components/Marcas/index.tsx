@@ -9,16 +9,17 @@ import samsung from '../../assets/Marcas/samsung.png';
 import consul from '../../assets/Marcas/consul.png';
 import midea from '../../assets/Marcas/midea.png';
 import lg from '../../assets/Marcas/lg.png';
+import type { ReactElement } from 'react';
 
-const marcaStyle = {
+const marcaStyle: React.CSSProperties = {
     width: '100%',
     height: '50px',
     objectFit: 'contain',
 }
 
-export default function Marcas() {
+export default function Marcas(): ReactElement {
 
-    const logos = [
+    const logos: string[] = [
         electrolux, 
         brastemp,
         samsung,

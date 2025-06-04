@@ -2,8 +2,9 @@ import './style.css';
 
 import iconFacebook from '../../assets/icons8-facebook.svg';
 import iconWhatsapp from '../../assets/icons8-whatsapp.svg';
+import type { ReactElement } from 'react';
 
-export default function Footer() {
+export default function Footer(): ReactElement {
     return (
     <footer className="site-footer">
       <div className="footer-content">

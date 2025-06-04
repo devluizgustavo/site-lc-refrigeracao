@@ -1,8 +1,9 @@
 
 import './style.css'
 
-import BtnGet from '../../components/BtnGet';
+import BtnGet from '../BtnGet';
 
+import type { ReactElement } from 'react';
 import { FaPeoplePulling } from "react-icons/fa6";
 import { MdRealEstateAgent } from "react-icons/md";
 import { FaDollarSign } from "react-icons/fa";
@@ -10,7 +11,8 @@ import { FaDollarSign } from "react-icons/fa";
 import img4 from '../../img/3.jpg'
 import logo from '../../assets/logo.jpg'
 
-export default function About() {
+export default function About(): ReactElement {
+
     return (
         <section className='container-about' id='about'>
 
@@ -34,7 +36,7 @@ export default function About() {
             </div>
 
 
-            <BtnGet nameButton="Quero fazer o orçamento" Side="center" />
+            <BtnGet nameButton="Quero fazer o orçamento" />
 
             <h3 style={{ color: '#000', textAlign: 'center' }} className='h2-title-about'>Por que escolher a LC Refrigeração?</h3>
 

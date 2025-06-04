@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type ReactElement } from 'react';
 import Neve from '../../assets/Logo/icon-neve.png';
 
 import { AiFillHome } from "react-icons/ai";
@@ -8,15 +8,15 @@ import { FaTools } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaHeadset } from "react-icons/fa";
 
-const styleLiDesktop = {
+const styleLiDesktop: React.CSSProperties = {
     margin: '0 auto',
     justifyContent: 'center',
     display: 'flex',
     gap: '100px',
-    alignItems: 'center',
+    alignItems: 'center'
 }
 
-const styleADesktop = {
+const styleADesktop: React.CSSProperties = {
     fontSize: '15px',
     fontWeight: '400',
     display: 'flex',
@@ -25,24 +25,23 @@ const styleADesktop = {
     textAlign: 'center',
 }
 
-const styleButton = {
+const styleButton: React.CSSProperties = {
     display: 'flex',
     alignItems: 'center',
     padding: '15px',
-    ackground: 'red',
     borderRadius: '1em',
     width: '150px',
     background: 'linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(25, 195, 230, 1) 48%, rgba(33, 149, 191, 1) 100%)'
 }
 
-export default function Header() {
+export default function Header(): ReactElement {
 
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [isDesktop, setIsDesktop] = useState(screenWidth >= 1280);
+    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+    const [isDesktop, setIsDesktop] = useState<boolean>(screenWidth >= 1280);
 
     useEffect(() => {
-        const handleResize = () => {
+        const handleResize = (): void => {
             setScreenWidth(window.innerWidth);
         }
 

@@ -296,19 +296,23 @@ header {
             justify-content: space-between;
             gap: 35em;
       }
-
+      
       .ul-barra {
             opacity: 85%;
       }
-
+      
       .ul-barra:hover {
             opacity: 100%;
             transition: 500ms ease, box-shadow 500ms ease
       }
-
+      
       .menu-contact {
             & a {
                   margin-right: 50px !important;
             }
+      }
+
+      .menu ul li a{
+            font-size: 15px !important;  
       }
 }

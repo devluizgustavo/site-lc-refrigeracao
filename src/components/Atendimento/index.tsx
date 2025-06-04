@@ -1,10 +1,11 @@
 
+import type { ReactElement } from 'react';
 import './style.css'
 
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function Atendimento() {
+export default function Atendimento(): ReactElement {
     return (
         <section id="atendimento">
 

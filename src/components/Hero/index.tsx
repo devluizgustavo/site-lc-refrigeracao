@@ -7,6 +7,7 @@ import { EffectFade, Autoplay } from 'swiper/modules';
 import { FaTools } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa";
 
+declare module '*.css';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
@@ -15,9 +16,10 @@ import img2 from '../../img/2.jpg';
 import img3 from '../../img/3.jpg';
 import img4 from '../../img/4.jpg';
 
-import BtnGet from '../../components/BtnGet';
+import BtnGet from '../BtnGet';
+import type { ReactElement } from 'react';
 
-export default function Hero() {
+export default function Hero(): ReactElement {
     return (
         <section className='carrosel'>
             <div className="effect"></div>

@@ -98,6 +98,30 @@
   .box-atend {
     background-size: 120%;
   }
+
+  .box-atend {
+    height: 250px;
+  }
+
+  .icon-atend {
+    height: 35px;
+  }
+
+  .number-phone {
+    font-size: 14px;
+  }
+
+  .btn-mensagem {
+    font-size: 12px !important;
+    top: 0;
+    margin: 0;
+    width: 75% !important;
+    padding: 15px 0px!important;
+  }
+
+  .canal-atendimento-h3 {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -133,5 +157,33 @@
   .box-atend:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .box-atend {
+    height: 250px;
+  }
+
+  .icon-atend {
+    height: 25px;
+  }
+
+  .number-phone {
+    font-size: 18px;
+  }
+
+  .btn-mensagem {
+    font-size: 15px !important;
+    top: 0;
+    margin: 0;
+    width: 75% !important;
+    padding: 15px 0px!important;
+  }
+
+  .canal-atendimento-h3 {
+    font-size: 17px;
+  }
+
+  .icon-atend {
+    height: 45px !important;
   }
 }

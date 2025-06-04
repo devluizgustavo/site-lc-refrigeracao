@@ -5,10 +5,20 @@ import Geladeira from '../../img/geladeira.jpg';
 import microOndas from '../../img/microondas.jpg'
 
 import ModelServicos from './ModelServicos';
-import BtnGet from '../../components/BtnGet';
+import BtnGet from '../BtnGet';
+import type { ReactElement } from 'react';
 
-export default function Servicos() {
-    const defMaquina = [
+interface ListDefeitos {
+    def1: string;
+    def2: string;
+    def3: string;
+    def4: string;
+    def5: string;
+    def6: string;
+}
+
+export default function Servicos(): ReactElement {
+    const defMaquina: ListDefeitos[] = [
         { 
             def1: "Não Funciona", 
             def2: "Não Centrifuga", 
@@ -19,7 +29,7 @@ export default function Servicos() {
         }
     ]
 
-    const defGeladeira = [
+    const defGeladeira: ListDefeitos[] = [
         {
             def1: "Não Gela", 
             def2: "Motor Não Liga", 
@@ -30,7 +40,7 @@ export default function Servicos() {
         }
     ]
 
-    const defMicroOndas = [
+    const defMicroOndas: ListDefeitos[] = [
         {
             def1: "Não Liga", 
             def2: "Liga e Não Esquenta", 
@@ -53,7 +63,7 @@ export default function Servicos() {
                     <ModelServicos NomeEletro={"Manutenção da Máquina de Lavar"} arrayDefeitos={defMaquina} imgEletro={maqLavar} />
                     <ModelServicos NomeEletro={"Manutenção de Geladeira"} arrayDefeitos={defGeladeira} imgEletro={Geladeira} />
                     <ModelServicos NomeEletro={"Manutenção de Micro-Ondas"} arrayDefeitos={defMicroOndas} imgEletro={microOndas} />
-                    <BtnGet nameButton={'Solicitar Agora'} Side="center"/>
+                    <BtnGet nameButton={'Solicitar Agora'} />
                 </div>
             </div>
         </section>

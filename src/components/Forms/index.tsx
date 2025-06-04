@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useState, type CSSProperties, type ReactElement } from 'react';
 import './style.css';
 
-import { FaWhatsapp } from "react-icons/fa";
+interface FormData {
+    nome: string;
+    email: string;
+    celular: string;
+    endereco: string;
+    eletrodomestico: string;
+    marca: string;
+    defeito: string;
+}
 
-const styleSelect = {
+const styleSelect: CSSProperties = {
     padding: '10px 4px',
     border: '1px solid #ccc',
     color: '#666',
@@ -12,11 +20,9 @@ const styleSelect = {
     fontSize: '14px',
 }
 
+export default function Forms(): ReactElement {
 
-
-export default function Forms() {
-
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         nome: '',
         email: '',
         celular: '',
@@ -26,13 +32,17 @@ export default function Forms() {
         defeito: ''
     })
 
-    const [status, setStatus] = useState('');
+    const [status, setStatus] = useState<string>('');
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>): void => {
+
+        const target = e.target as EventTarget & { name: string; value: string };
+        const { name, value } = target;
+        
+        setFormData({ ...formData, [name]: value });
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const response = await fetch('https://formspree.io/f/xgvywybv', {
@@ -40,18 +50,9 @@ export default function Forms() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                nome: formData.nome,
-                email: formData.email,
-                celular: formData.celular,
-                endereco: formData.endereco,
-                eletrodomestico: formData.eletrodomestico,
-                marca: formData.marca,
-                defeito: formData.defeito
-            }),
+            body: JSON.stringify(formData),
         });
 
-        console.log(response)
         if (response.ok) {
             setStatus('Sua solicitação foi enviada. Por Gentileza, aguarde o retorno do técnico.');
             setFormData({
@@ -64,7 +65,8 @@ export default function Forms() {
                 defeito: ''
             })
         } else {
-            setStatus('Ocorreu algum erro ao enviar a sua solicitação. Tente Novamente!')
+            setStatus('Ocorreu algum erro ao enviar a sua solicitação. Tente Novamente!');
+            return;
         }
     }
 
@@ -87,7 +89,7 @@ export default function Forms() {
                     <input type="text" name="celular" value={formData.celular} onChange={handleChange} placeholder="(11) 91111-2222" required />
                     <input type="text" name="endereco" value={formData.endereco} onChange={handleChange} placeholder="Endereço para visita ( Rua e Cidade )" required />
 
-                    <select name="select" id="" style={styleSelect} onChange={handleChange} value={formData.option} required >
+                    <select name="eletrodomestico" id="" style={styleSelect} onChange={handleChange} value={formData.eletrodomestico} required >
                         <option value="default">Escolha o seu Eletrodoméstico</option>
                         <option value="maq">Máquina de Lavar</option>
                         <option value="gel">Geladeira</option>
@@ -97,7 +99,7 @@ export default function Forms() {
 
                     <input type="text" name="marca" value={formData.marca} onChange={handleChange}  placeholder="Escolha a Marca" required />
 
-                    <textarea name="defeito" value={formData.defeito} onChange={handleChange}  placeholder="Descreva o defeito" rows={4} required></textarea>
+                    <textarea name="defeito" style={{ maxWidth: '100%' }} value={formData.defeito} onChange={handleChange}  placeholder="Descreva o defeito" rows={4} required></textarea>
                     <button type="submit">Enviar</button>
 
                     {status && <p>{status}</p>}

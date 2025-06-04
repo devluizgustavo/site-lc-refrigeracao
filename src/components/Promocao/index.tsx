@@ -1,13 +1,19 @@
 import './style.css';
 
 import { Swiper, SwiperSlide, } from 'swiper/react';
-import { EffectFade, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 import Motor from '../../img/motor.png'
+import type { ReactElement } from 'react';
 
+interface Promos {
+    id: number;
+    text: string;
+    style?: object;
+}
 
-export default function Promocao() {
-    const promocoes = [
+export default function Promocao(): ReactElement {
+    const promocoes: Promos[]  = [
         { id: 1, text: '<strong>ESTAMOS COM PROMOÇÃO!</strong>'},
         { id: 2, text: '<strong>10% de Desconto</strong> na troca do Motor ou Compressor' },
         { id: 3, text: 'A partir de <strong>R$950,00 á vista</strong>' },

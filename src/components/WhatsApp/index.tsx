@@ -1,8 +1,8 @@
+import type { ReactElement } from 'react';
 import './style.css';
 import { FaWhatsapp } from "react-icons/fa";
 
-
-export default function WhatsApp() {
+export default function WhatsApp(): ReactElement {
     return (
         <div className='container-whatsapp'>
             <div className='content-whatsapp'>

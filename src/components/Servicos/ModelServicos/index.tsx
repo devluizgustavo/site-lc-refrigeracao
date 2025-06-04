@@ -1,6 +1,21 @@
 import './style.css';
 
-export default function ModelServicos({ NomeEletro, arrayDefeitos, imgEletro }) {
+interface Defeitos {
+  def1: string;
+  def2: string;
+  def3: string;
+  def4: string;
+  def5: string;
+  def6: string;
+}
+
+interface ModeloServicos {
+    NomeEletro: string;
+    arrayDefeitos: Defeitos[];
+    imgEletro: string;
+}
+
+export default function ModelServicos({ NomeEletro, arrayDefeitos, imgEletro }: ModeloServicos) {
 
     return (
         <section className='servicos' id='servicos'>
