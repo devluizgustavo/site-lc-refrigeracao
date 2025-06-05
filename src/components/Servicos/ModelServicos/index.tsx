@@ -41,6 +41,7 @@ export default function ModelServicos({ NomeEletro, arrayDefeitos, imgEletro }: 
                             <li>{defeito.def6}</li>
                         </ul>
                     ))}
+
                 </div>
 
 

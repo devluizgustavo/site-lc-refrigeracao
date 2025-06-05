@@ -58,7 +58,7 @@ export default function Servicos(): ReactElement {
 
             <div className="container">
                 <div className="content">
-                    <h2 style={{ fontWeight: 350 }}>Para quais <strong>eletrodomésticos</strong> devo <strong>solicitar</strong> a LC?</h2>
+                    <h2 style={{ fontWeight: 350 }} id='title-defs-content'>Para quais <strong>eletrodomésticos</strong> devo <strong>solicitar</strong> a LC?</h2>
 
                     <ModelServicos NomeEletro={"Manutenção da Máquina de Lavar"} arrayDefeitos={defMaquina} imgEletro={maqLavar} />
                     <ModelServicos NomeEletro={"Manutenção de Geladeira"} arrayDefeitos={defGeladeira} imgEletro={Geladeira} />

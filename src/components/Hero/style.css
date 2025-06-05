@@ -58,8 +58,8 @@
   max-width: 100%;
   overflow: hidden;
   object-fit: cover;
-  filter: brightness(0.4);
   height: 32em;
+  filter: brightness(0.7);
 }
 
 .hero-text {
@@ -89,7 +89,7 @@
       rgb(211, 250, 255) 50%,
       rgba(0, 183, 255, 1) 100%);
   z-index: 5;
-  opacity: 25%;
+  opacity: 30%;
 }
 
 @media (min-width: 320px) {
@@ -115,13 +115,6 @@
 
 
   .carousel-image {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    filter: brightness(0.1);
     height: 35em;
   }
 
@@ -154,13 +147,6 @@
 
 
   .carousel-image {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    filter: brightness(0.1);
     height: 35em;
   }
 
@@ -171,13 +157,6 @@
 
 @media (min-width: 768px) {
   .back-ballon {
-    margin: 15px 0px;
-    padding: 1px 25px;
-    background: rgba(0, 0, 0, 0.5);
-    width: 200px;
-    text-align: center;
-    border-radius: 5em;
-
     & p {
       font-size: 13px;
     }
@@ -205,13 +184,6 @@
 
 
   .carousel-image {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    filter: brightness(0.1);
     height: 35em;
   }
 
@@ -222,12 +194,8 @@
 
 @media (min-width: 1280px) {
   .back-ballon {
-    margin: 15px 0px;
-    padding: 1px 25px;
-    background: rgba(0, 0, 0, 0.5);
-    width: 220px;
-    text-align: center;
-    border-radius: 5em;
+    width: 50% !important;
+    padding: 10px 25px;
 
     & p {
       font-size: 14px;
@@ -238,7 +206,7 @@
   .hero-text-overlay {
     position: absolute;
     z-index: 10;
-    top: 200px;
+    top: 175px;
     left: 120px;
     width: 71%;
     color: rgb(255, 255, 255);
@@ -249,23 +217,17 @@
   }
 
   .carousel-image {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    filter: brightness(0.4);
     height: 45em;
   }
 
   .hero-text {
-    font-size: 35px;
+    font-size: 32px;
     margin-bottom: 25px;
   }
 
 
   .hero-subtext {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 20px;
 
     & span {

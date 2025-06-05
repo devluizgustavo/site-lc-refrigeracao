@@ -13,11 +13,12 @@ const styleLiDesktop: React.CSSProperties = {
     justifyContent: 'center',
     display: 'flex',
     gap: '100px',
+    fontSize: '25px',
     alignItems: 'center'
 }
 
 const styleADesktop: React.CSSProperties = {
-    fontSize: '15px',
+    fontSize: '25px',
     fontWeight: '400',
     display: 'flex',
     alignItems: 'center',
@@ -31,6 +32,7 @@ const styleButton: React.CSSProperties = {
     padding: '15px',
     borderRadius: '1em',
     width: '150px',
+    fontSize: '25px',
     background: 'linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(25, 195, 230, 1) 48%, rgba(33, 149, 191, 1) 100%)'
 }
 
@@ -70,7 +72,10 @@ export default function Header(): ReactElement {
 
                             <ul style={{ marginTop: '12px', justifyContent: 'space-between', gap: '55px', alignItems: 'center' }}>
                                 <li className='ul-barra'><a href="https://wa.me/5511961399425" style={styleButton}>Contratar Agora</a></li>
-                                <li className='ul-barra'><a href="#" style={{ width: '150px', display: 'flex' }}>11 96139-9425</a></li>
+                                <li className='ul-barra'><a href="#" style={{ width: '85px', display: 'flex', fontSize: '25px' }}>
+                                    11 96139-9425
+                                    11 91499-0605
+                                    </a></li>
                             </ul>
 
                         </div>

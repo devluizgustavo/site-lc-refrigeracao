@@ -149,11 +149,8 @@
     }
 
     .img-bottom {
-        border-radius: 50%;
         height: 20em;
         width: 20em;
-        object-fit: cover;
-        box-shadow: 1px 1px 5px #00000096;
         margin: 50px
     }
 

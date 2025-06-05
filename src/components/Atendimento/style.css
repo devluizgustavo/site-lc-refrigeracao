@@ -29,15 +29,15 @@
   margin-bottom: 25px;
   width: 100%;
   background: rgb(18, 245, 207);
-  padding: 50px;
+  padding: 25px;
   border-radius: 1em;
   transition: background-color 0.3s;
   position: relative;
   background-image: url('../../img/atendimento.jpg');
   background-size: 125%;
   color: white;
-  padding: 2rem;
   overflow: hidden;
+  min-height: 190px;
 }
 
 .two {
@@ -62,9 +62,14 @@
   z-index: 1;
 }
 
+.number-phone {
+  font-size: 12.5px !important;
+}
+
 @media (min-width: 320px) {
   .box-atend {
     height: 180px;
+    background-size: 500px;
   }
 
   .icon-atend {
@@ -90,8 +95,14 @@
 
 @media (min-width: 375px) {
   .box-atend {
-    background-size: 500px;
+    background-size: 600px;
+    height: 240px !important;
   }
+
+  .btn-mensagem {
+    padding: 15px !important;
+  }
+  
 }
 
 @media (min-width: 768px) {
@@ -134,23 +145,11 @@
   }
 
   .box-atend {
-    margin-bottom: 25px;
-    width: 100%;
-    background: rgb(18, 245, 207);
-    padding: 50px;
-    border-radius: 1em;
-    transition: background-color 0.3s;
-    position: relative;
-    background-image: url('../../img/atendimento.jpg');
     background-size: 150%;
-    color: white;
-    padding: 2rem;
-    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .two {
-    background-image: url('../../img/atendimento-two.jpg');
     background-size: 200%;
   }
 
@@ -160,7 +159,7 @@
   }
 
   .box-atend {
-    height: 250px;
+    height: 300px;
   }
 
   .icon-atend {

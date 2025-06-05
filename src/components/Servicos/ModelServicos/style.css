@@ -109,7 +109,7 @@
         .text-container {
             margin: 0px 250px;
         }
-
+        
         .img-style-servs {
             height: 250px;
             margin-top: 25px;
@@ -130,5 +130,7 @@
         .styleLi {
             font-size: 17px;
             align-items: left;
+            margin: 50px;
+            width: 100%;
         }
     }

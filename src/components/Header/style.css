@@ -135,7 +135,7 @@ header {
 
 .menu .dropdown li:active {
       background: rgb(15, 179, 201);
-      transition: 0 all;
+      transition: 250ms all;
 }
 
 /* Dispositivo P */
@@ -295,10 +295,15 @@ header {
             display: flex;
             justify-content: space-between;
             gap: 35em;
+
       }
       
       .ul-barra {
             opacity: 85%;
+      }
+
+      .ul-barra li a {
+            opacity: 0% !important;
       }
       
       .ul-barra:hover {

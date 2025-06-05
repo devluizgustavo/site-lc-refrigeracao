@@ -15,6 +15,7 @@ import img1 from '../../img/1.jpg';
 import img2 from '../../img/2.jpg';
 import img3 from '../../img/3.jpg';
 import img4 from '../../img/4.jpg';
+import img5 from '../../img/5.jpg';
 
 import BtnGet from '../BtnGet';
 import type { ReactElement } from 'react';
@@ -29,13 +30,16 @@ export default function Hero(): ReactElement {
                         <img src={img1} alt="Conserto Geladeira" className='carousel-image' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={img2} alt="Maquina de Lavar" className='carousel-image' />
+                        <img src={img4} alt="Maquina de Lavar" className='carousel-image' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={img3} alt="Conserto Maquina de Lavar" className='carousel-image' />
+                        <img src={img5} alt="Conserto Maquina de Lavar" className='carousel-image' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={img4} alt="Geladeiras" className='carousel-image' />
+                        <img src={img2} alt="Geladeiras" className='carousel-image' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={img3} alt="Geladeiras" className='carousel-image' />
                     </SwiperSlide>
                 </Swiper>
             </div>

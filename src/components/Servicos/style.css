@@ -19,3 +19,9 @@
         font-size: 19px !important;
     }
 }
+
+@media (min-width: 1280px) {
+    #title-defs-content {
+        font-size: 25px !important;
+    }
+}

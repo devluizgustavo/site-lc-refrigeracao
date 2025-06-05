@@ -19,6 +19,7 @@ export default function Atendimento(): ReactElement {
                         <FaPhoneAlt size={50} color="#fff" style={{ padding: '0px'}} className='icon-atend'/>
 
                         <div style={{ margin: '25px', fontSize: '10x', fontWeight: '700' }} className='number-phone'>
+                            11 91499-0605<br/>
                             11 96139-9425
                         </div>
 
@@ -35,6 +36,7 @@ export default function Atendimento(): ReactElement {
                         <FaWhatsapp size={55} color="#fff" style={{ padding: '0px'}} className='icon-atend'/>
 
                         <div style={{ margin: '25px', fontSize: '10x', fontWeight: '700' }} className='number-phone'>
+                            11 91499-0605<br/>
                             11 96139-9425
                         </div>
 
