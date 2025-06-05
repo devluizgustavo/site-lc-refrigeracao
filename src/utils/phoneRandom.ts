@@ -1,10 +1,14 @@
+let lastIndex: number | null = null;
+
 export default function phoneRandom(): string {
-    const phones: Array<string> = ["5511914990605", "5511961399425"];
+    const phones: string[] = ["5511914990605", "5511961399425"];
 
-    const min: number = 0;
-    const max: number = 2;
+    let index = Math.floor(Math.random() * phones.length);
 
-    const index: number = Math.floor(Math.random() * (max - min) + min);
+    if (index === lastIndex) {
+        index = (index + 1) % phones.length;
+    }
 
+    lastIndex = index;
     return phones[index];
 }
