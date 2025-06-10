@@ -1,58 +1,55 @@
-<<<<<<< HEAD
-# site-claudio-fretado
-=======
-# React + TypeScript + Vite
+LC Refrigerações - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A landing page LC Refrigerações foi desenvolvida com o objetivo de promover os serviços de conserto de eletrodomésticos da empresa. A página oferece informações essenciais sobre os serviços prestados, formas de contato e destaque para o diferencial da empresa no mercado. A landing page está otimizada para garantir uma experiência de usuário simples e eficiente.
 
-Currently, two official plugins are available:
+Link do Site: LC Refrigerações
+Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    HTML: Estrutura básica da página.
 
-## Expanding the ESLint configuration
+    CSS: Estilização responsiva para adaptar-se a diferentes dispositivos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    JavaScript: Interatividade, como formulários de contato e animações leves.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+    [Se você usou alguma biblioteca ou framework, como Bootstrap, pode adicionar aqui]
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Funcionalidades
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    Informações sobre os serviços: Destaque para os tipos de consertos de eletrodomésticos oferecidos.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
->>>>>>> master
+    Formulário de Contato: Permite que os visitantes solicitem informações ou agendem um conserto.
+
+    Design Responsivo: A página é adaptável a diferentes tamanhos de tela, garantindo uma boa experiência tanto em dispositivos móveis quanto desktop.
+
+    Informações de Localização e Contato: Exibe os dados da empresa para facilitar o contato.
+
+Como Rodar o Projeto Localmente
+
+    Clone este repositório:
+
+git clone https://github.com/seu-usuario/lc-refrigeracoes.git
+
+Acesse a pasta do projeto:
+
+    cd lc-refrigeracoes
+
+    Abra o arquivo index.html em seu navegador para visualizar a landing page.
+
+        Não há necessidade de servidor local para visualização, basta abrir o arquivo HTML.
+
+Imagens ou Capturas de Tela
+
+(Se você tiver imagens da landing page ou capturas de tela do site, inclua aqui)
+Contribuindo
+
+    Faça um fork deste repositório.
+
+    Crie uma nova branch para suas alterações (git checkout -b minha-branch).
+
+    Faça as alterações desejadas.
+
+    Envie um pull request para a branch principal deste repositório.
+
+Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
