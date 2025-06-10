@@ -10,7 +10,7 @@ A landing page LC Refrigerações foi desenvolvida com o objetivo de promover os
 
 - CSS: Estilização responsiva para adaptar-se a diferentes dispositivos.
 
-- TypeScript: Interatividade, como formulários de contato e animações leves.
+- JavaScript/TypeScript: Interatividade, como formulários de contato e animações leves.
 
 - React: Componentes da Página e Hooks
 
