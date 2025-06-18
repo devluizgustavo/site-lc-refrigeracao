@@ -1,5 +1,7 @@
 import './style.css'
 
+import type { ReactElement } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 
@@ -9,12 +11,14 @@ import samsung from '../../assets/Marcas/samsung.png';
 import consul from '../../assets/Marcas/consul.png';
 import midea from '../../assets/Marcas/midea.png';
 import lg from '../../assets/Marcas/lg.png';
-import type { ReactElement } from 'react';
 
 const marcaStyle: React.CSSProperties = {
     width: '100%',
+    display: 'flex',
     height: '50px',
     objectFit: 'contain',
+    justifyContent: 'space-between',
+    gap: '50px'
 }
 
 export default function Marcas(): ReactElement {
@@ -38,10 +42,24 @@ export default function Marcas(): ReactElement {
                         modules={[Autoplay]} 
                         autoplay={{ delay: 3000 }} 
                         slidesPerView={3} 
-                        spaceBetween={16}
+                        spaceBetween={50}
                         loop={true}
                         grabCursor={true}
-                        style={{ padding: '50px' }}
+                        style={{ padding: '35px'  }}
+                        breakpoints={{
+                        706: {
+                            slidesPerView: 3,
+                            spaceBetween: 100,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                        },
+                    }}
                     >
                         {logos.map((srcMarca, index) => (
                         <SwiperSlide
