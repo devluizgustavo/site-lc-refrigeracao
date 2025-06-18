@@ -41,6 +41,7 @@ export default function Marcas(): ReactElement {
                         spaceBetween={16}
                         loop={true}
                         grabCursor={true}
+                        style={{ padding: '50px' }}
                     >
                         {logos.map((srcMarca, index) => (
                         <SwiperSlide

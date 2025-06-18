@@ -8,7 +8,7 @@ import Servicos from './components/Servicos/index.tsx';
 import WhatsApp from './components/WhatsApp/index.tsx';
 import Promocao from './components/Promocao/index.tsx';
 import Atendimento from './components/Atendimento/index.tsx';
-import Avalicaoes from './components/Avaliacoes/index.tsx';
+import Avalicoes from './components/Avaliacoes/index.tsx';
 
 import './components/Header/style.css';
 
@@ -21,7 +21,7 @@ function App() {
       <Promocao />
       <About />
       <Servicos />
-      <Avalicaoes />
+      <Avalicoes />
       <Marcas />
       <Forms />
       <Atendimento />
