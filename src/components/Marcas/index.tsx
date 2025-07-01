@@ -47,9 +47,18 @@ export default function Marcas(): ReactElement {
                         grabCursor={true}
                         style={{ padding: '35px'  }}
                         breakpoints={{
-                        706: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 40,
+                        },
+                        500: {
+                            slidesPerView: 2,
+                            spaceBetween: 40,
+                        },
+                        600: {
                             slidesPerView: 3,
-                            spaceBetween: 100,
+                            spaceBetween: 40,
+
                         },
                         1024: {
                             slidesPerView: 4,

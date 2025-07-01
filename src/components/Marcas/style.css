@@ -11,13 +11,13 @@
 
 @media (min-width: 320px) {
     #marcas p {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
 @media (min-width: 768px) {
     #marcas p {
-        font-size: 15px;
+        font-size: 17px;
     }
 }
 
