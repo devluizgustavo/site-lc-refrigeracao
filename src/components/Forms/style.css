@@ -40,6 +40,10 @@
   background-color: #00796b;
 }
 
+#eletro > option {
+  font-size: 16px;
+}
+
 .contato-title {
   font-size: 20px;
 }
