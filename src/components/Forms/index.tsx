@@ -104,10 +104,11 @@ export default function Forms(): ReactElement {
 
             } else {
                 setStatus('Ocorreu algum erro ao enviar a sua solicitação. Tente Novamente!');
-                console.log(response)
+                console.log(response.body)
                 return;
             }
         } catch (err) {
+            console.log(err);
             setStatus("Erro de conexão. Tente novamente.");
         }
 
