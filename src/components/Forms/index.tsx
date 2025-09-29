@@ -122,7 +122,7 @@ export default function Forms(): ReactElement {
                 </p>
 
                 <form
-                    action="https://api-email-i2q4.onrender.com"
+                    action="https://api-email-i2q4.onrender.com/send-form"
                     method="POST"
                     className="contato-form"
                     onSubmit={handleSubmit}
