@@ -1,5 +1,6 @@
 import { useState, type CSSProperties, type ReactElement } from 'react';
 import './style.css';
+import { maskPhone } from '../../utils/maskPhone';
 
 interface FormData {
     nome: string;
@@ -41,22 +42,29 @@ export default function Forms(): ReactElement {
         const target = e.target as EventTarget & { name: string; value: string };
         const { name, value } = target;
 
-        setFormData({ ...formData, [name]: value });
+        let newValue = value;
+
+        if (name === "celular") {
+            if (newValue.length > 15) return;
+            newValue = maskPhone(value);
+        }
+
+        setFormData({ ...formData, [name]: newValue });
     }
 
     const validation = (): void => {
         // Validar campos no input
         if (!formData) errors.push("Preencha todo o formulário.")
         if (!/^[A-Za-zÀ-ÿ\s]{2,}$/.test(formData.nome)) errors.push("Por favor, digite um nome válido.");
-        if (!/^[0-9\-\(\)]+$/.test(formData.celular)) errors.push("Numero de celular inválido.")
+        if (!/^[0-9()\-\s]*$/.test(formData.celular)) errors.push("Numero de celular inválido.")
         if (!/^[A-Za-zÀ-ÿ\s]{2,}$/.test(formData.marca)) errors.push("Por favor, digite uma marca válida.");
-        if (!formData.eletrodomestico || formData.eletrodomestico === "default") errors.push("Por favor, escolha um eletrodoméstico.")
+        if (!formData.eletrodomestico || formData.eletrodomestico === "Default") errors.push("Por favor, escolha um eletrodoméstico.")
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) errors.push("Por favor, digite um email válido.");
     }
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+        
         setErrors([]);
         validation();
 
@@ -73,7 +81,7 @@ export default function Forms(): ReactElement {
         setIsSending(true);
 
         try {
-            const response = await fetch('https://formspree.io/f/xgvywybv', {
+            const response = await fetch('https://api-email-i2q4.onrender.com/send-form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -114,7 +122,7 @@ export default function Forms(): ReactElement {
                 </p>
 
                 <form
-                    action="https://formspree.io/f/xgvywybv"
+                    action="https://api-email-i2q4.onrender.com/send-form"
                     method="POST"
                     className="contato-form"
                     onSubmit={handleSubmit}
@@ -122,14 +130,14 @@ export default function Forms(): ReactElement {
                     <input type="text" name="nome" value={formData.nome} onChange={handleChange} placeholder="Seu nome" required />
                     <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Seu e-mail" required />
                     <input type="text" name="celular" value={formData.celular} onChange={handleChange} placeholder="(11) 91111-2222" required />
-                    <input type="text" name="endereco" value={formData.endereco} onChange={handleChange} placeholder="Endereço para visita ( Rua e Cidade )" required />
+                    <input type="text" name="endereco" value={formData.endereco} onChange={handleChange} placeholder="Endereço para visita ( Rua e Numero da Casa )" required />
 
                     <select name="eletrodomestico" id="eletro" style={styleSelect} onChange={handleChange} value={formData.eletrodomestico} required >
-                        <option value="default">Escolha o seu Eletrodoméstico</option>
-                        <option value="maq">Máquina de Lavar</option>
-                        <option value="gel">Geladeira</option>
-                        <option value="micro">Micro-Ondas</option>
-                        <option value="out">Outros</option>
+                        <option value="Default">Escolha o seu Eletrodoméstico</option>
+                        <option value="Maquina de Lavar">Máquina de Lavar</option>
+                        <option value="Geladeira">Geladeira</option>
+                        <option value="Micro Ondas">Micro-Ondas</option>
+                        <option value="Outros">Outros</option>
                     </select>
 
                     <input type="text" name="marca" value={formData.marca} onChange={handleChange} placeholder="Escolha a Marca" required />
