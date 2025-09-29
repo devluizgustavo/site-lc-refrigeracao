@@ -81,7 +81,7 @@ export default function Forms(): ReactElement {
         setIsSending(true);
 
         try {
-            const response = await fetch('https://api-email-i2q4.onrender.com/send-form', {
+            const response = await fetch('https://api-email-one.vercel.app/send-form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ export default function Forms(): ReactElement {
                 </p>
 
                 <form
-                    action="https://api-email-i2q4.onrender.com/send-form"
+                    action="https://api-email-one.vercel.app/send-form"
                     method="POST"
                     className="contato-form"
                     onSubmit={handleSubmit}
