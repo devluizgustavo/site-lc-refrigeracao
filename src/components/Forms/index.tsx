@@ -81,7 +81,7 @@ export default function Forms(): ReactElement {
         setIsSending(true);
 
         try {
-            const response = await fetch('https://api-email-i2q4.onrender.com', {
+            const response = await fetch('https://api-email-i2q4.onrender.com/send-form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -104,6 +104,7 @@ export default function Forms(): ReactElement {
 
             } else {
                 setStatus('Ocorreu algum erro ao enviar a sua solicitação. Tente Novamente!');
+                console.log(response)
                 return;
             }
         } catch (err) {
