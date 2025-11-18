@@ -28,7 +28,7 @@ export default function About(): ReactElement {
                     <h2>Com mais de 10 anos de experiência no mercado</h2>
                     <p>
                         A <strong>LC Refrigeração</strong> se tornou referência em
-                        <strong> manutenção e conserto de geladeiras, maquinas de lavar e micro-ondas</strong> em toda a região de São Paulo. Nossa missão é clara:<br/><br/>
+                        <strong> manutenção e conserto de geladeiras, maquinas de lavar e micro-ondas</strong> em toda a região de São Paulo. Nossa missão é clara:<br /><br />
                         <i style={{ opacity: "75%", fontWeight: 200 }}>”Oferecer <strong>serviços rápidos, acessíveis e com qualidade de excelência</strong>, sempre com um toque humano no atendimento.”</i>
                     </p>
                 </div>
@@ -45,7 +45,7 @@ export default function About(): ReactElement {
                     <div>
                         <FaPeoplePulling size={35} />
                     </div>
-                    Atendimento humanizado e transparente
+                    Atendimento humanizado e transparente.
                 </div>
 
                 <div className="box" style={{
@@ -54,27 +54,27 @@ export default function About(): ReactElement {
                     <div>
                         <MdRealEstateAgent size={35} />
                     </div>
-                    Cobertura a domicílio em toda a cidade de São Paulo
+                    Cobertura a domicílio em toda a cidade de São Paulo.
                 </div>
 
                 <div className="box">
                     <div>
                         <FaDollarSign size={35} />
                     </div>
-                    Orçamentos sem compromisso e preços justos
+                    Preço justo e serviço de confiança, do jeitinho que você merece.
                 </div>
 
             </div>
-                    <div style={{ textAlign: 'center', margin: '0 auto', justifyContent: 'center' }} className='container-diferencial'>
-                        <h3 style={{ textAlign: 'center', color: '#00b7ff' }}>E temos um diferencial</h3>
-                        <p style={{ textAlign: 'center', fontSize: '14px' }} className='p-diferencial'>
-                            Precisou, chegou! Oferecemos <strong>atendimento técnico a domicílio</strong> 24 horas por dia.
-                            Com <strong>rapidez</strong> e <strong>confiança</strong>, estamos sempre prontos para te atender
-                            a qualquer hora, inclusive nos <strong>finais de semana</strong> e <strong>feriados</strong>.
-                        </p>
-        
-                    </div>
-                    
+            <div style={{ textAlign: 'center', margin: '0 auto', justifyContent: 'center' }} className='container-diferencial'>
+                <h3 style={{ textAlign: 'center', color: '#00b7ff' }}>E temos um diferencial</h3>
+                <p style={{ textAlign: 'center', fontSize: '14px' }} className='p-diferencial'>
+                    Precisou, chegou! Oferecemos <strong>atendimento técnico a domicílio</strong> 24 horas por dia.
+                    Com <strong>rapidez</strong> e <strong>confiança</strong>, estamos sempre prontos para te atender
+                    a qualquer hora, inclusive nos <strong>finais de semana</strong> e <strong>feriados</strong>.
+                </p>
+
+            </div>
+
             <div className='img-container'>
                 <img src={img4} alt="Geladeiras" className='img-bottom' />
             </div>

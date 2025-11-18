@@ -44,22 +44,22 @@ export default function Hero(): ReactElement {
                 </Swiper>
             </div>
 
-                <div className='hero-text-overlay'>
-                    <div className='content-text'>
-                        <h2 className='hero-text'>Quebrou? <br />Nós consertamos!</h2>
-                        <p className='hero-subtext'>Reparos de eletrodomésticos, orçamento sem <b>compromisso</b> e sem enrolação.</p>
-                        <div className='container-ballon'>
-                            <div className="back-ballon">
-                                <p><FaTools style={{ marginRight: '10px' }} size={11} />Garantia Completa</p>
-                            </div>
-
-                             <div className="back-ballon">
-                                 <p><FaRegClock style={{ marginRight: '10px' }} size={11} />24 Horas</p>
-                             </div>
+            <div className='hero-text-overlay'>
+                <div className='content-text'>
+                    <h2 className='hero-text'>Quebrou? <br />Nós consertamos!</h2>
+                    <p className='hero-subtext'>Reparos de eletrodomésticos, orçamento sem <b>compromisso</b> e sem enrolação.</p>
+                    <div className='container-ballon'>
+                        <div className="back-ballon">
+                            <p><FaTools style={{ marginRight: '10px' }} size={11} />Serviços com garantia</p>
                         </div>
-                        <BtnGet nameButton={'Fale Conosco'} />
+
+                        <div className="back-ballon">
+                            <p><FaRegClock style={{ marginRight: '10px' }} size={11} />Atendimento 24 Horas</p>
+                        </div>
                     </div>
+                    <BtnGet nameButton={'Fale Conosco'} />
                 </div>
+            </div>
         </section>
     )
 }
