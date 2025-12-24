@@ -1,6 +1,5 @@
 .btnBase {
   margin: 25px 0px;
-  padding: 10px 20px;
   background: linear-gradient(90deg, #00b7ff 0%, #19c3e6 48%, #2195bf 100%);
   color: white;
   font-size: 12px;
@@ -9,11 +8,13 @@
   text-align: center;
   align-items: center;
   display: inline-flex;
-  border-radius: 15px;
+  border-radius: 5em;
   cursor: pointer;
   text-align: center;
   transition: transform 0.3s ease;
   text-decoration: none;
+  width: auto;
+  box-shadow: 0.3px 0.3px 20px #00b7ff54;
 }
 
 .btnBase:hover {
@@ -29,7 +30,6 @@
 
 @media (min-width: 1280px) {
   .btnBase {
-    padding: 25px 30px;
     font-size: 16px;
   }
 }

@@ -1,10 +1,24 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [tailwindcss(), react()],
   build: {
     outDir: "dist"
+  },
+  server: {
+    host: '127.0.0.1',
+    port: 5173,
+    hmr: {
+      host: '127.0.0.1',
+      protocol: 'ws',
+    },
+    watch: {
+      usePolling: true,
+      interval: 100
+    }
   }
 })
+

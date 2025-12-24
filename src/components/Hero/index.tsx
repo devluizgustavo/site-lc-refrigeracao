@@ -1,11 +1,11 @@
-import './style.css';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { EffectFade, Autoplay } from 'swiper/modules';
 
-import { FaTools } from "react-icons/fa";
-import { FaRegClock } from "react-icons/fa";
+import { CiCircleCheck } from "react-icons/ci";
+import { HiArrowLongRight } from "react-icons/hi2";
+import { FaStar } from "react-icons/fa6";
+
 
 declare module '*.css';
 import 'swiper/css';
@@ -21,45 +21,94 @@ import BtnGet from '../BtnGet';
 import type { ReactElement } from 'react';
 
 export default function Hero(): ReactElement {
+    const images = [
+        { src: img1, alt: "Conserto Geladeira" },
+        { src: img4, alt: "Maquina de Lavar" },
+        { src: img5, alt: "Conserto Maquina de Lavar" },
+        { src: img2, alt: "Geladeiras" },
+        { src: img3, alt: "Geladeiras" },
+    ];
+
     return (
-        <section className='carrosel'>
-            <div className="effect"></div>
-            <div className="carrosel-container">
-                <Swiper modules={[EffectFade, Autoplay]} autoplay={{ delay: 5000 }} effect='fade' slidesPerView={1} loop={true}>
-                    <SwiperSlide>
-                        <img src={img1} alt="Conserto Geladeira" className='carousel-image' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={img4} alt="Maquina de Lavar" className='carousel-image' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={img5} alt="Conserto Maquina de Lavar" className='carousel-image' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={img2} alt="Geladeiras" className='carousel-image' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={img3} alt="Geladeiras" className='carousel-image' />
-                    </SwiperSlide>
+        <section className="relative w-full h-[105vh] overflow-hidden">
+            {/* Swiper Overlay (Escurecimento da imagem para leitura) */}
+            <div
+                style={{ background: 'linear-gradient(to left, rgba(134, 207, 255, 0.9) 10%, rgba(255, 254, 254, 1) 40%, #e0f9ffe3 100%)' }}
+                className="absolute inset-0 z-10 pointer-events-none opacity-50"></div>
+
+            {/* Container do Carrossel */}
+            <div className="absolute inset-0 w-full h-full">
+                <Swiper
+                    modules={[EffectFade, Autoplay]}
+                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    effect="fade"
+
+                    slidesPerView={1}
+                    loop={true}
+                    className="h-full w-full"
+                >
+                    {images.map((img, index) => (
+                        <SwiperSlide key={index}>
+                            <img
+                                src={img.src}
+                                alt={img.alt}
+                                className="w-full h-full object-cover"
+                            />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
 
-            <div className='hero-text-overlay'>
-                <div className='content-text'>
-                    <h2 className='hero-text'>Quebrou? <br />Nós consertamos!</h2>
-                    <p className='hero-subtext'>Solução rápida e definitiva para seu eletrodoméstico. Contamos com técnicos qualificados e <b>peças originais.</b></p>
-                    <div className='container-ballon'>
-                        <div className="back-ballon">
-                            <p><FaTools style={{ marginRight: '10px' }} size={11} />Serviços com garantia</p>
+            {/* Overlay de Texto e Conteúdo */}
+            <div className="relative z-20 flex items-center justify-left m-10 w-full h-full px-4 md:px-8">
+                <div className="text-white flex flex-col items-center md:items-start text-center md:text-left">
+
+                    {/* Badge de Insight */}
+                    <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-500/50 text-white-500 px-4 py-1 rounded-full text-xs md:text-sm font-bold mb-6">
+                        <FaStar />
+                        ESPECIALISTAS EM CONSERTOS
+                    </div>
+
+                    {/* Título Principal */}
+                    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                        Solução Definitiva <br />
+                        para o seu <span className="text-sky-500">Eletrodoméstico</span>
+                    </h1>
+
+                    {/* Subtexto */}
+                    <p className="text-xl md:text-4xl text-black mb-8 max-w-2xl leading-relaxed">
+                        Repare sua geladeira, máquina de lavar ou micro-ondas com quem entende do assunto.
+                        Solução rápida e definitiva para seu eletrodoméstico com técnicos qualificados
+                        e peças originais.
+                    </p>
+
+                    {/* Balões de Benefícios */}
+                    <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-10">
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 shadow-lg">
+                            <CiCircleCheck className="text-green-400" size={24} />
+                            <p className="text-sm font-semibold">Técnicos Certificados</p>
                         </div>
 
-                        <div className="back-ballon">
-                            <p><FaRegClock style={{ marginRight: '10px' }} size={11} />Atendimento 24 Horas</p>
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 shadow-lg">
+                            <CiCircleCheck className="text-green-400" size={24} />
+                            <p className="text-sm font-semibold">Garantia no serviço</p>
+                        </div>
+
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 shadow-lg">
+                            <CiCircleCheck className="text-green-400" size={24} />
+                            <p className="text-sm font-semibold">Atendimento Ágil</p>
                         </div>
                     </div>
-                    <BtnGet nameButton={'Fale Conosco'} />
+
+                    {/* Botão de Ação */}
+                    <div className="flex items-center justify-center md:justify-start w-full">
+                        <BtnGet
+                            nameButton="Solicitar orçamento"
+                            icon={<HiArrowLongRight className="ml-4 transition-transform group-hover:translate-x-2" size={25} />}
+                        />
+                    </div>
                 </div>
             </div>
-        </section>
-    )
+        </section >
+    );
 }
