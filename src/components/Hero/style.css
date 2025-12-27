@@ -5,30 +5,68 @@
   width: 100%;
 }
 
-.back-ballon {
-  margin: 15px 0px;
-  padding: 1px 25px;
-  background: rgba(0, 0, 0, 0.5);
-  width: 200px;
-  text-align: center;
+.content-insight {
+  opacity: 80%;
+  padding: 10px;
+  width: 330px;
+  font-size: 14px;
   border-radius: 5em;
+  background: #ffffff70;
+  margin-bottom: 20px;
+  color: var(--button-primary);
+  font-weight: 500;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  box-shadow: #b5e1ffb4 0px 2px 5px;
+}
+
+.swiper-overlay {
+  /* Define a posição e dimensões */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Z-Index: Posiciona acima do Swiper, mas abaixo do texto */
+  z-index: 10;
+
+  /* O Efeito de Luz/Sombra */
+  /* Você pode usar um gradiente sutil para um efeito mais profissional: */
+  background: linear-gradient(to left,
+      rgba(75, 198, 255, 0.24) 10%,
+      /* Branco com 50% de opacidade no topo */
+      rgba(252, 252, 252, 0.904) 40%,
+      /* Transparente no meio */
+      #e0f2fee7 100%
+      /* Uma sombra escura sutil na parte de baixo */
+    );
+
+  /* Se você quiser apenas uma cor branca sólida com opacidade sutil: */
+  /* background: rgba(255, 255, 255, 0.2); */
+}
+
+.back-ballon {
+  margin: 0;
+  width: 200px;
+  align-items: center;
+  text-align: center;
 
   & p {
     font-size: 11px;
+    color: black;
+    font-weight: 500;
   }
 }
 
 .container-ballon {
-  display: block;
+  display: flex;
 }
 
 .hero-text-overlay {
   position: absolute;
-  top: 15px;
-  left: 60px;
   z-index: 10;
-  width: 75%;
-  height: 100%;
   color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -42,6 +80,7 @@
   font-size: 17px;
   text-align: left;
   margin: 0 auto;
+  align-items: center;
 }
 
 
@@ -64,18 +103,36 @@
 
 .hero-text {
   margin-top: 0px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  color: black;
 }
 
 .hero-subtext {
   font-size: 14px;
   margin: 0;
+  color: black;
 
   & span {
     font-size: 18px;
     font-weight: 200;
   }
+}
+
+.text-gradient {
+  /* 1. Define o gradiente como background */
+  background: linear-gradient(90deg,
+      rgb(0, 183, 255) 0%,
+      rgb(13, 148, 189) 100%);
+
+  /* 2. CRUCIAL: Diz ao navegador para 'cortar' o background na forma do texto */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. CRUCIAL: Torna o texto transparente para que o background apareça */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* Fallback para outros navegadores */
 }
 
 .effect {
@@ -84,12 +141,7 @@
   width: 100%;
   height: 32em;
   position: absolute;
-  background: linear-gradient(to bottom,
-      rgb(255, 255, 255) 0%,
-      rgb(211, 250, 255) 50%,
-      rgba(0, 183, 255, 1) 100%);
-  z-index: 5;
-  opacity: 30%;
+  background: #ffffff;
 }
 
 @media (min-width: 320px) {
@@ -98,6 +150,7 @@
   }
 
   .hero-text {
+
     margin-bottom: 25px;
     font-size: 19px;
   }
@@ -126,7 +179,7 @@
 /* Dispositivo G */
 @media (min-width: 375px) {
   .hero-text-overlay {
-    width: 75%;
+    width: 100%;
   }
 
   .hero-text {
@@ -157,6 +210,13 @@
 
 @media (min-width: 768px) {
   .back-ballon {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    display: flex;
+
+    gap: 20px;
+
     & p {
       font-size: 13px;
     }
@@ -164,7 +224,7 @@
 
 
   .hero-text-overlay {
-    width: 75%;
+    width: 100%;
   }
 
   .hero-text {
@@ -194,8 +254,11 @@
 
 @media (min-width: 1280px) {
   .back-ballon {
-    width: 50% !important;
-    padding: 10px 25px;
+    gap: 5px;
+
+    align-items: center;
+    display: flex;
+
 
     & p {
       font-size: 14px;
@@ -206,9 +269,11 @@
   .hero-text-overlay {
     position: absolute;
     z-index: 10;
-    top: 175px;
-    left: 120px;
-    width: 71%;
+    text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.250);
+    opacity: 90%;
+    top: 145px;
+    left: 45px;
+    width: 50%;
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: left;
@@ -216,12 +281,16 @@
     margin: 0 auto;
   }
 
+
   .carousel-image {
     height: 45em;
   }
 
   .hero-text {
-    font-size: 32px;
+    font-size: 3rem;
+
+    font-weight: 800;
+    line-height: 1.1;
     margin-bottom: 25px;
   }
 
@@ -246,7 +315,7 @@
   .hero-text-overlay {
     position: absolute;
     z-index: 10;
-    top: 200px;
+    top: 0px;
     left: 120px;
     width: 75%;
     color: rgb(255, 255, 255);

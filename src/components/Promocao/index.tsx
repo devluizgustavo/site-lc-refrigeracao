@@ -13,12 +13,12 @@ interface Promos {
 }
 
 export default function Promocao(): ReactElement {
-    const promocoes: Promos[]  = [
-        { id: 1, text: '<strong>ESTAMOS COM PROMOÇÃO!</strong>'},
+    const promocoes: Promos[] = [
+        { id: 1, text: '<strong>ESTAMOS COM PROMOÇÃO!</strong>' },
         { id: 2, text: '<strong>10% de Desconto</strong> na troca do Motor ou Compressor' },
         { id: 3, text: 'A partir de <strong>R$950,00 á vista</strong>' },
         { id: 4, text: 'Ou <strong>parcelamos</strong> em até <strong>10x de R$1200 S/Juros</strong>' },
-        { id: 5, text: 'Trabalhamos somente com <strong>PEÇAS ORIGINAIS</strong>' },    
+        { id: 5, text: 'Trabalhamos somente com <strong>PEÇAS ORIGINAIS</strong>' },
     ]
 
     return (
