@@ -102,17 +102,17 @@ export default function About(): ReactElement {
                     </div>
 
                     {/* Relatório Empresa */}
-                    <div className='content-resume'>
+                    <div className='content-resume items-center mt-[50px] flex flex-col md:flex-row gap-[50px]'>
                         {resumeStat.map((res, index) => {
                             const Icon = res.icon;
 
                             return (
-                                <div key={index} className='box-resume'>
+                                <div key={index} className='flex-col items-center rounded-lg shadow p-10'>
                                     <div className='effect-box'></div> {/* Efeito de Luz na Box */}
 
                                     {/* Icone */}
-                                    <div className='icon-content'>
-                                        <Icon size={60} style={iconStyle} />
+                                    <div className='icon-content items-center m-0 auto justify-center flex'>
+                                        <Icon size={60} style={iconStyle} className='flex' />
                                     </div>
 
                                     {/* Titulo & Relatorio */}
@@ -148,10 +148,10 @@ export default function About(): ReactElement {
                             <img src={tecnico_photo} alt="" />
                         </div>
 
-                        <div style={{ textAlign: 'left' }}>
-                            <h1 style={{ width: '12em', color: '#1f1f1fe0' }}>Manutenção que dura  <b>Serviço que você confia!</b></h1>
+                        <div className='text-left'>
+                            <h1 style={{ width: '12em', color: '#1f1f1fe0' }} className='text-4xl'>Manutenção que dura  <span className='font-bold'>Serviço que você confia!</span></h1>
 
-                            <p style={{ fontSize: '17px', opacity: '90%', letterSpacing: '0.4px', lineHeight: '1.5em' }}>
+                            <p style={{ fontSize: '17px', opacity: '90%', letterSpacing: '0.4px', lineHeight: '1.5em' }} className='mt-10'>
                                 Desde 2014, a LC Refrigeração trabalha com dedicação e transparência.
                                 Trabalhamos somente com peças originais e de qualidade e utilizamos técnicas atualizadas
                                 para garantir uma manutenção duradoura. Com experiência e responsabilidade, entregamos
@@ -172,7 +172,7 @@ export default function About(): ReactElement {
 
                             <hr style={{ marginTop: '40px', opacity: '50%' }} />
 
-                            <p style={{ fontStyle: 'italic', opacity: '80%', fontSize: '15px' }}>
+                            <p style={{ fontStyle: 'italic', opacity: '80%', fontSize: '15px' }} className='mt-5'>
                                 "Nosso objetivo é simples: ser a empresa de reparos em eletrodoméstico mais confiável e
                                 responsiva de São Paulo. Cada cliente é importante para nós."
                             </p>
@@ -183,17 +183,17 @@ export default function About(): ReactElement {
 
                     {/* Diferenciais */}
                     <div>
-                        <h1 style={{ color: '#1f1f1fe0', textAlign: 'center' }}>Nossos diferenciais</h1>
-                        <p style={{ color: '#1f1f1fe0', textAlign: 'center', fontSize: '15px' }}>O que nos torna a escolha certa para o reparo do seu eletrodoméstico</p>
+                        <h1 style={{ color: '#1f1f1fe0', textAlign: 'center' }} className='text-4xl'>Nossos diferenciais</h1>
+                        <p style={{ color: '#1f1f1fe0', textAlign: 'center', fontSize: '17px', marginTop: '10px' }}>O que nos torna a escolha certa para o reparo do seu eletrodoméstico</p>
                     </div>
 
                     {/* Box Diferenciais */}
-                    <div style={{ display: 'flex', gap: '50px', marginTop: '50px' }}>
+                    <div className=' mt-[50px] flex flex-col md:flex-row gap-[50px]'>
                         {resumeDifferentials.map((res, index) => {
                             const Icon = res.icon;
 
                             return (
-                                <div key={index} className='box-resume' style={{ padding: '3em', textAlign: 'left' }}>
+                                <div key={index} className='block p-6 md:p-12 text-left relative overflow-hidden rounded-lg shadow p-10'>
                                     <div className='effect-box'></div> {/* Efeito d e Luz na Box */}
 
                                     {/* Icone */}
@@ -204,13 +204,13 @@ export default function About(): ReactElement {
                                     {/* Titulo & Relatorio */}
                                     <div>
                                         {/* Estatística Numero */}
-                                        <div className='static-content' style={{ fontSize: '17px', color: '#3b3b3bff' }}>
+                                        <div className='static-content text-[17px] text-[#3b3b3b] font-bold'>
                                             {res.title}
                                         </div>
                                     </div>
 
                                     {/* Descrição resumida */}
-                                    <div style={{ marginTop: '10px', color: '#363636ff' }}>
+                                    <div className='mt-2 text-[#363636]'>
                                         {res.description}
 
                                     </div>
@@ -220,29 +220,29 @@ export default function About(): ReactElement {
                     </div>
 
                     {/* Box Diferenciais */}
-                    <div style={{ display: 'flex', marginTop: '50px', gap: '50px' }}>
+                    <div className='mt-[50px] flex flex-col md:flex-row gap-[50px]'>
                         {resumeDifferentials2.map((res, index) => {
                             const Icon = res.icon;
 
                             return (
-                                <div key={index} className='box-resume' style={{ padding: '3em', textAlign: 'left', gap: '5em' }}>
+                                <div key={index} className='block p-6 md:p-12 text-left relative overflow-hidden rounded-lg shadow p-10'>
                                     <div className='effect-box'></div> {/* Efeito d e Luz na Box */}
 
                                     {/* Icone */}
-                                    <div className='icon-content'>
+                                    <div className='icon-content justify-center flex-col items-center m-0'>
                                         <Icon size={60} style={iconStyle} />
                                     </div>
 
                                     {/* Titulo & Relatorio */}
                                     <div>
                                         {/* Estatística Numero */}
-                                        <div className='static-content' style={{ fontSize: '17px', color: '#3b3b3bff' }}>
+                                        <div className='static-content text-md text-[#3b3b3b] font-bold'>
                                             {res.title}
                                         </div>
                                     </div>
 
                                     {/* Descrição resumida */}
-                                    <div style={{ marginTop: '10px', color: '#363636ff' }}>
+                                    <div className='mt-2 text-[#363636]'>
                                         {res.description}
 
                                     </div>

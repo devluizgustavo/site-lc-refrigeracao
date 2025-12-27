@@ -58,7 +58,7 @@
 .box-resume {
     box-shadow: #0000001c 0px 7px 10px;
     width: 50%;
-    padding: 30px;
+    padding: 50px;
     border-radius: 1em;
     transition: transform 500ms ease, 500ms ease;
 }
@@ -79,7 +79,7 @@
 
 .static-content {
     margin-top: 10px;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 800;
 }
 

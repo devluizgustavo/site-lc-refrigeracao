@@ -33,11 +33,11 @@ export default function Hero(): ReactElement {
         <section className="relative w-full h-[105vh] overflow-hidden">
             {/* Swiper Overlay (Escurecimento da imagem para leitura) */}
             <div
-                style={{ background: 'linear-gradient(to left, rgba(134, 207, 255, 0.9) 10%, rgba(255, 254, 254, 1) 40%, #e0f9ffe3 100%)' }}
+                style={{ background: 'linear-gradient(to left, rgba(255, 255, 255, 0.86) 10%, rgba(41, 116, 146, 0.51) 40%, #194647e3 100%)' }}
                 className="absolute inset-0 z-10 pointer-events-none opacity-50"></div>
 
             {/* Container do Carrossel */}
-            <div className="absolute inset-0 w-full h-full">
+            <div className="absolute inset-0 w-full h-full blur-xs">
                 <Swiper
                     modules={[EffectFade, Autoplay]}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -70,13 +70,13 @@ export default function Hero(): ReactElement {
                     </div>
 
                     {/* Título Principal */}
-                    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-[2px_2px_10px_rgba(0,0,0,0.4)]">
                         Solução Definitiva <br />
                         para o seu <span className="text-sky-500">Eletrodoméstico</span>
                     </h1>
 
                     {/* Subtexto */}
-                    <p className="text-xl md:text-4xl text-black mb-8 max-w-2xl leading-relaxed">
+                    <p className="!text-xl md:text-2xl max-w-3xl mb-8 mt-5">
                         Repare sua geladeira, máquina de lavar ou micro-ondas com quem entende do assunto.
                         Solução rápida e definitiva para seu eletrodoméstico com técnicos qualificados
                         e peças originais.

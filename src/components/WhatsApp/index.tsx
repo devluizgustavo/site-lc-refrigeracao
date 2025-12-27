@@ -31,13 +31,13 @@ export default function WhatsApp(): ReactElement {
                     </div>
                 </div>
 
-                <div style={{ padding: '5px 20px' }}>
+                <div style={{ padding: '5px 20px' }} className='mt-5'>
                     <p style={{ fontSize: '14px' }}>Temos uma equipe pronta para atender você de <b>segunda a domingo a qualquer hora</b>, incluindo feriados!</p>
                 </div>
 
                 <div className='content-contact'>
                     <div className='box-contact' onClick={() => redirectFromWhatsapp()}>
-                        <img src={logoTec} alt="Foto-Técnico" height={60} style={{ borderRadius: '5em' }} />
+                        <img src={logoTec} alt="Foto-Técnico" height={20} style={{ borderRadius: '5em' }} className='h-10' />
                         <p style={{ fontSize: '15px', color: '#000000bb' }}>LC | REFRIGERAÇÃO</p>
                     </div>
                 </div>
