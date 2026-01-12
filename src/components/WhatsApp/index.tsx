@@ -9,53 +9,43 @@ import phoneRandom from '../../utils/phoneRandom';
 export default function WhatsApp(): ReactElement {
     const [isClick, setIsClick] = useState<boolean>(false);
 
-    // Get Click
     const redirectFromWhatsapp = () => {
         window.location.href = `https://wa.me/${phoneRandom()}`
     }
 
-    const whatsappClass = `${isClick ? 'rotated' : ''}`;
-    const contentShape = `content-shape ${isClick ? 'moved' : 'notMoved'}`
-
     return (
-
-
         <div className='container-whatsapp'>
-
-            <div className={contentShape}>
-                <div className='box-content'>
-                    <div style={{ display: 'flex', alignItems: 'center', padding: '15px' }}>
-
-                        <FaWhatsapp size={20} color='#fff' style={{ padding: '0px' }} />
-                        <h1 style={{ padding: '15px', fontSize: '17px', color: '#fff' }}>Atendimento no Whatsapp</h1>
-                    </div>
+            {/* Balão de Mensagem */}
+            <div className={`content-shape ${isClick ? 'moved' : 'notMoved'}`}>
+                <div className='bg-[#25d366] p-3 flex items-center gap-3'>
+                    <FaWhatsapp size={24} color='#fff' />
+                    <h1 className="text-white font-bold text-sm">Atendimento no Whatsapp</h1>
                 </div>
 
-                <div style={{ padding: '5px 20px' }} className='mt-5'>
-                    <p style={{ fontSize: '14px' }}>Temos uma equipe pronta para atender você de <b>segunda a domingo a qualquer hora</b>, incluindo feriados!</p>
+                <div className='p-4'>
+                    <p className='text-gray-600 leading-relaxed'>
+                        Temos uma equipe pronta para atender você de <b>segunda a domingo a qualquer hora</b>!
+                    </p>
                 </div>
 
-                <div className='content-contact'>
-                    <div className='box-contact' onClick={() => redirectFromWhatsapp()}>
-                        <img src={logoTec} alt="Foto-Técnico" height={20} style={{ borderRadius: '5em' }} className='h-10' />
-                        <p style={{ fontSize: '15px', color: '#000000bb' }}>LC | REFRIGERAÇÃO</p>
+                <div className='p-3 bg-gray-50'>
+                    <div className='flex items-center gap-3 p-2 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-gray-100 transition-colors' 
+                         onClick={redirectFromWhatsapp}>
+                        <img src={logoTec} alt="Técnico" className='w-10 h-10 rounded-full object-cover' />
+                        <span className='text-xs font-bold text-gray-800'>Falar com LC REFRIGERAÇÃO</span>
                     </div>
                 </div>
             </div>
 
-            <div
-                className='content-whatsapp'
-                onClick={() => setIsClick(!isClick)}
-            >
-                <a
-                    className={whatsappClass}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Fale conosco no WhatsApp"
-                >
-                    {!isClick ? <FaWhatsapp size={20} color='#fff' style={{ padding: '0px' }} /> : <IoIosClose size={20} style={{ padding: '0px' }} />}
-                </a>
+            {/* Botão Flutuante (O círculo) */}
+            <div className='content-whatsapp' onClick={() => setIsClick(!isClick)}>
+                {/* Removi o <a> para evitar conflitos, já que o clique é no div pai */}
+                {!isClick ? (
+                    <FaWhatsapp size={30} color='#fff' />
+                ) : (
+                    <IoIosClose size={45} color='#fff' />
+                )}
             </div>
-        </div >
+        </div>
     )
 }
