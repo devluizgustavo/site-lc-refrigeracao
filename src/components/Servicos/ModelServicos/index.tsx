@@ -17,7 +17,7 @@ interface ModeloServicos {
 
 export default function ModelServicos({ NomeEletro, arrayDefeitos, imgEletro }: ModeloServicos) {
     return (
-        <div className='bg-white rounded-2xl border border-gray-200 shadow-lg 
+        <div className='bg-white rounded-2xl border border-gray-200 !shadow-lg border-gray-100 border-[2px] hover:scale-[1.02] 
                         hover:shadow-2xl transition-all duration-300 flex flex-col h-full'>
             
             {/* Cabeçalho do Card */}

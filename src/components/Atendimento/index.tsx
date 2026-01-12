@@ -15,7 +15,7 @@ export default function Atendimento(): ReactElement {
 
                 <div className="box-atend">
                     <div className="overlay"></div>
-                    <div className="ligacao-button">
+                    <div className="ligacao-button flex items-center flex-col">
                         <FaPhoneAlt size={50} color="#fff" style={{ padding: '0px'}} className='icon-atend'/>
 
                         <div style={{ margin: '25px', fontSize: '10x', fontWeight: '700' }} className='number-phone'>
@@ -32,7 +32,7 @@ export default function Atendimento(): ReactElement {
  
                 <div className="box-atend two">
                     <div className="overlay"></div>
-                    <div className="ligacao-button">
+                    <div className="ligacao-button flex items-center flex-col">
                         <FaWhatsapp size={55} color="#fff" style={{ padding: '0px'}} className='icon-atend'/>
 
                         <div style={{ margin: '25px', fontSize: '10x', fontWeight: '700' }} className='number-phone'>

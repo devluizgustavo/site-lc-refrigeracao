@@ -33,11 +33,18 @@
 }
 
 .container-col {
-    flex-direction: column;
-    flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10em auto;
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+    margin: 4em auto; 
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .container-col {
+        grid-template-columns: 1fr 1fr;
+        margin: 8em auto;
+    }
 }
 
 .content-image {
