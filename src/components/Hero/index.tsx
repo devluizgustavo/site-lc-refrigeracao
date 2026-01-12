@@ -1,11 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { EffectFade, Autoplay } from 'swiper/modules';
-
 import { CiCircleCheck } from "react-icons/ci";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { FaStar } from "react-icons/fa6";
-
 
 declare module '*.css';
 import 'swiper/css';
@@ -30,19 +27,38 @@ export default function Hero(): ReactElement {
     ];
 
     return (
-        <section className="relative w-full h-[105vh] overflow-hidden">
-            {/* Swiper Overlay (Escurecimento da imagem para leitura) */}
-            <div
-                style={{ background: 'linear-gradient(to left, rgba(255, 255, 255, 0.86) 10%, rgba(41, 116, 146, 0.51) 40%, #194647e3 100%)' }}
-                className="absolute inset-0 z-10 pointer-events-none opacity-50"></div>
+        <section className="relative w-full h-screen min-h-[600px] overflow-hidden flex items-center justify-center">
+            
+            {/* Overlay de Gradiente */}
+           <div className="absolute inset-0 z-10 pointer-events-none">
+    {/* Camada 1: O desfoque real (vazio, apenas para processar o fundo) */}
+    <div className="absolute inset-0 backdrop-blur-[2px]"></div>
 
-            {/* Container do Carrossel */}
-            <div className="absolute inset-0 w-full h-full blur-xs">
+    {/* Camada 2: O Gradiente de cor Dinâmico */}
+    <div 
+        className="absolute inset-0"
+        style={{
+            background: `
+                radial-gradient(circle at 70% 10%, rgba(215, 243, 255, 0.56) 0%, transparent 40%),
+                radial-gradient(circle at 0% 100%, rgba(10, 31, 32, 0.95) 0%, rgba(10, 31, 32, 0.7) 50%, transparent 100%)
+            `
+        }}
+    ></div>
+
+    {/* Camada 3: Feixe de luz sutil (O detalhe que faz a diferença) */}
+    <div className="absolute top-0 right-0 w-full h-full opacity-30"
+        style={{
+            background: 'conic-gradient(from 220deg at 90% 0%, transparent 0deg, rgba(255, 255, 255, 0.62) 10deg, transparent 40deg)'
+        }}
+    ></div>
+</div>
+
+            {/* Container do Carrossel (Fundo) */}
+            <div className="absolute inset-0 w-full h-full">
                 <Swiper
                     modules={[EffectFade, Autoplay]}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
                     effect="fade"
-
                     slidesPerView={1}
                     loop={true}
                     className="h-full w-full"
@@ -59,52 +75,49 @@ export default function Hero(): ReactElement {
                 </Swiper>
             </div>
 
-            {/* Overlay de Texto e Conteúdo */}
-            <div className="relative z-20 flex items-center justify-left m-10 w-full h-full px-4 md:px-8">
-                <div className="text-white flex flex-col items-center md:items-start text-center md:text-left">
+            {/* Conteúdo Centralizado Responsivo */}
+            <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12">
+                <div className="text-white mt-20 flex flex-col items-center md:items-start max-w-2xl text-center md:text-left">
 
-                    {/* Badge de Insight */}
-                    <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-500/50 text-white-500 px-4 py-1 rounded-full text-xs md:text-sm font-bold mb-6">
-                        <FaStar />
+                    {/* Badge */}
+                    <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-500/50 px-4 py-1 rounded-full text-xs md:text-sm font-bold mb-6 w-fit">
+                        <FaStar className="text-cyan-400" />
                         ESPECIALISTAS EM CONSERTOS
                     </div>
 
-                    {/* Título Principal */}
-                    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-[2px_2px_10px_rgba(0,0,0,0.4)]">
+                    {/* Título com clamp para não sumir no zoom out */}
+                    <h1 className="text-4xl md:!text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-6 drop-shadow-lg">
                         Solução Definitiva <br />
-                        para o seu <span className="text-sky-500">Eletrodoméstico</span>
+                        para o seu <span className="text-sky-400">Eletrodoméstico</span>
                     </h1>
 
-                    {/* Subtexto */}
-                    <p className="!text-xl md:text-2xl max-w-3xl mb-8 mt-5">
+                    {/* Subtexto ajustado */}
+                    <p className="!text-[16px] !text-center md:!text-lg mt-5 text-gray-200 mb-8 md:!text-left max-w-lg">
                         Repare sua geladeira, máquina de lavar ou micro-ondas com quem entende do assunto.
-                        Solução rápida e definitiva para seu eletrodoméstico com técnicos qualificados
-                        e peças originais.
+                        Técnicos qualificados e peças originais.
                     </p>
 
-                    {/* Balões de Benefícios */}
-                    <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-10">
-                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 shadow-lg">
-                            <CiCircleCheck className="text-green-400" size={24} />
-                            <p className="text-sm font-semibold">Técnicos Certificados</p>
+                    {/* Benefícios */}
+                    <div className="flex flex-col md:flex-row flex-wrap gap-3 mb-10 justify-center md:justify-start">
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 shadow-lg">
+                            <CiCircleCheck className="text-green-400" size={20} />
+                            <span className="text-sm font-semibold">Técnicos Certificados</span>
                         </div>
-
-                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 shadow-lg">
-                            <CiCircleCheck className="text-green-400" size={24} />
-                            <p className="text-sm font-semibold">Garantia no serviço</p>
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 shadow-lg">
+                            <CiCircleCheck className="text-green-400" size={20} />
+                            <span className="text-sm font-semibold">Garantia no serviço</span>
                         </div>
-
-                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 shadow-lg">
-                            <CiCircleCheck className="text-green-400" size={24} />
-                            <p className="text-sm font-semibold">Atendimento Ágil</p>
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 shadow-lg">
+                            <CiCircleCheck className="text-green-400" size={20} />
+                            <span className="text-sm font-semibold">Atendimento Ágil</span>
                         </div>
                     </div>
 
-                    {/* Botão de Ação */}
-                    <div className="flex items-center justify-center md:justify-start w-full">
+                    {/* Botão */}
+                    <div className="w-full flex justify-center md:justify-start">
                         <BtnGet
                             nameButton="Solicitar orçamento"
-                            icon={<HiArrowLongRight className="ml-4 transition-transform group-hover:translate-x-2" size={25} />}
+                            icon={<HiArrowLongRight className="transition-transform group-hover:translate-x-2" size={20} />}
                         />
                     </div>
                 </div>

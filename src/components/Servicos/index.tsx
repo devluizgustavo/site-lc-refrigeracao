@@ -53,19 +53,30 @@ export default function Servicos(): ReactElement {
 
 
     return (
-        <section className='servicos' id='servicos'>
+     <section className='servicos p-10' id='servicos'>
+    
+    {/* O segredo: max-w + mx-auto sem o !important no m-auto */}
+    <div className="w-full max-w-6xl mx-auto px-4 flex flex-col items-center">
+        
+        {/* Título Centralizado */}
+        <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-white" id='title-defs-content'>
+                Para quais <strong className="font-bold">eletrodomésticos</strong> devo <strong className="font-bold">solicitar</strong> a LC?
+            </h2>
+        </div>
 
-
-            <div className="container">
-                <div className="content">
-                    <h2 style={{ fontWeight: 350 }} id='title-defs-content'>Para quais <strong>eletrodomésticos</strong> devo <strong>solicitar</strong> a LC?</h2>
-
-                    <ModelServicos NomeEletro={"Manutenção da Máquina de Lavar"} arrayDefeitos={defMaquina} imgEletro={maqLavar} />
-                    <ModelServicos NomeEletro={"Manutenção de Geladeira"} arrayDefeitos={defGeladeira} imgEletro={Geladeira} />
-                    <ModelServicos NomeEletro={"Manutenção de Micro-Ondas"} arrayDefeitos={defMicroOndas} imgEletro={microOndas} />
-                    <BtnGet nameButton={'Solicitar Agora'} />
-                </div>
+        {/* Grid ou Coluna de Conteúdo */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4">
+            <ModelServicos NomeEletro={"Manutenção de Geladeiras"} arrayDefeitos={defGeladeira} imgEletro={Geladeira} />
+            <ModelServicos NomeEletro={"Manutenção da Máquina de Lavar"} arrayDefeitos={defMaquina} imgEletro={maqLavar} />
+            <ModelServicos NomeEletro={"Manutenção de Micro-Ondas"} arrayDefeitos={defMicroOndas} imgEletro={microOndas} />
+            
+            <div className="mt-8">
+                <BtnGet nameButton={'Solicitar Agora'} />
             </div>
-        </section>
+        </div>
+
+    </div>
+</section>
     )
 }

@@ -92,7 +92,7 @@ export default function About(): ReactElement {
 
 
                     <div className='content-about'>
-                        <h1 className='title-about'>Quem Somos</h1>
+                        <h1 className='title-about !text-4xl md:!text-5xl'>Quem Somos</h1>
 
                         <p style={{ textAlign: 'center', color: '#383838ff' }}>A <span style={{ color: '#0EA5E9', fontWeight: '700' }}>LC Refrigeração</span> é
                             referência em climatização e serviços de refrigeração em São Paulo.
@@ -102,7 +102,7 @@ export default function About(): ReactElement {
                     </div>
 
                     {/* Relatório Empresa */}
-                    <div className='content-resume items-center mt-[50px] flex flex-col md:flex-row gap-[50px]'>
+                    <div className='mt-[50px] grid grid-cols-1 md:grid-cols-4 gap-8 w-full max-w-7xl mx-auto px-4'>
                         {resumeStat.map((res, index) => {
                             const Icon = res.icon;
 
@@ -111,7 +111,7 @@ export default function About(): ReactElement {
                                     <div className='effect-box'></div> {/* Efeito de Luz na Box */}
 
                                     {/* Icone */}
-                                    <div className='icon-content items-center m-0 auto justify-center flex'>
+                                    <div className=' items-center m-0 auto justify-center flex'>
                                         <Icon size={60} style={iconStyle} className='flex' />
                                     </div>
 
@@ -144,12 +144,12 @@ export default function About(): ReactElement {
                     <div className='container-col'>
 
                         {/* Imagem do Técnico */}
-                        <div className='content-image'>
+                        <div className='content-image hidden md:flex items-end justify-center h-full hidden lg:block'>
                             <img src={tecnico_photo} alt="" />
                         </div>
 
-                        <div className='text-left'>
-                            <h1 style={{ width: '12em', color: '#1f1f1fe0' }} className='text-4xl'>Manutenção que dura  <span className='font-bold'>Serviço que você confia!</span></h1>
+                        <div className='text-center md:text-left'>
+                            <h1 style={{ width: '12em', color: '#1f1f1fe0' }} className='text-4xl md:!text-5xl'>Manutenção que dura  <span className='font-bold'>Serviço que você confia!</span></h1>
 
                             <p style={{ fontSize: '17px', opacity: '90%', letterSpacing: '0.4px', lineHeight: '1.5em' }} className='mt-10'>
                                 Desde 2014, a LC Refrigeração trabalha com dedicação e transparência.
@@ -163,7 +163,7 @@ export default function About(): ReactElement {
 
                             <div>
                                 {whyChoiceUs.map((r, i) => (
-                                    <div key={i} style={{ marginTop: '20px', display: 'flex', gap: '10px', fontWeight: '480', fontSize: '14.5px', opacity: '80%' }}>
+                                    <div key={i} style={{ marginTop: '20px', display: 'flex', gap: '10px', fontWeight: '480', fontSize: '14.5px', opacity: '80%', textAlign: 'left' }}>
                                         <FaCheckCircle color="#69e06591" size={20} />
                                         {r}
                                     </div>
@@ -172,7 +172,7 @@ export default function About(): ReactElement {
 
                             <hr style={{ marginTop: '40px', opacity: '50%' }} />
 
-                            <p style={{ fontStyle: 'italic', opacity: '80%', fontSize: '15px' }} className='mt-5'>
+                            <p style={{ fontStyle: 'italic', opacity: '80%', fontSize: '15px' }} className='mt-5 !text-center md:!text-left'>
                                 "Nosso objetivo é simples: ser a empresa de reparos em eletrodoméstico mais confiável e
                                 responsiva de São Paulo. Cada cliente é importante para nós."
                             </p>
@@ -183,12 +183,12 @@ export default function About(): ReactElement {
 
                     {/* Diferenciais */}
                     <div>
-                        <h1 style={{ color: '#1f1f1fe0', textAlign: 'center' }} className='text-4xl'>Nossos diferenciais</h1>
+                        <h1 style={{ color: '#1f1f1fe0', textAlign: 'center' }} className='text-4xl font-semibold'>Nossos diferenciais</h1>
                         <p style={{ color: '#1f1f1fe0', textAlign: 'center', fontSize: '17px', marginTop: '10px' }}>O que nos torna a escolha certa para o reparo do seu eletrodoméstico</p>
                     </div>
 
                     {/* Box Diferenciais */}
-                    <div className=' mt-[50px] flex flex-col md:flex-row gap-[50px]'>
+                    <div className='mt-[50px] grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl mx-auto px-4'>
                         {resumeDifferentials.map((res, index) => {
                             const Icon = res.icon;
 
@@ -220,7 +220,7 @@ export default function About(): ReactElement {
                     </div>
 
                     {/* Box Diferenciais */}
-                    <div className='mt-[50px] flex flex-col md:flex-row gap-[50px]'>
+                    <div className='mt-[50px] grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl mx-auto px-4'>
                         {resumeDifferentials2.map((res, index) => {
                             const Icon = res.icon;
 

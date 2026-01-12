@@ -16,7 +16,7 @@ export default function BtnGet({ nameButton, icon }: BtnGetProps): ReactElement 
             <div className='container-button'>
                 <a href={`https://wa.me/${phoneRandom()}`} className='btnBase'>
                     {nameButton}
-                    {icon ? icon : <FaWhatsapp size={25} style={{ marginLeft: '25px' }} className='iconWhatsapp' />}
+                    {icon ? icon : <FaWhatsapp size={25} style={{ marginLeft: '50px' }} className='iconWhatsapp' />}
 
                 </a>
             </div>
