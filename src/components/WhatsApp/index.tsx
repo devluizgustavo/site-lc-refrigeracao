@@ -26,7 +26,7 @@ export default function WhatsApp(): ReactElement {
                 <div className='box-content'>
                     <div style={{ display: 'flex', alignItems: 'center', padding: '15px' }}>
 
-                        <FaWhatsapp size={30} color='#fff' style={{ padding: '0px' }} />
+                        <FaWhatsapp size={20} color='#fff' style={{ padding: '0px' }} />
                         <h1 style={{ padding: '15px', fontSize: '17px', color: '#fff' }}>Atendimento no Whatsapp</h1>
                     </div>
                 </div>
@@ -52,9 +52,8 @@ export default function WhatsApp(): ReactElement {
                     target="_blank"
                     rel="noopener noreferrer"
                     title="Fale conosco no WhatsApp"
-                // Remova o onClick daqui se ele estiver na div pai
                 >
-                    {!isClick ? <FaWhatsapp size={30} color='#fff' style={{ padding: '0px' }} /> : <IoIosClose size={30} style={{ padding: '0px' }} />}
+                    {!isClick ? <FaWhatsapp size={20} color='#fff' style={{ padding: '0px' }} /> : <IoIosClose size={20} style={{ padding: '0px' }} />}
                 </a>
             </div>
         </div >

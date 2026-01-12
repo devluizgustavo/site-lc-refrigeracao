@@ -88,7 +88,7 @@ export default function About(): ReactElement {
     return (
         <>
             <div className='back-about'>
-                <section className='container-about' id='about'>
+                <section className='px-6 py-12 max-w-7xl mx-auto overflow-hidden' id='about'>
 
 
                     <div className='content-about'>
@@ -111,19 +111,19 @@ export default function About(): ReactElement {
                                     <div className='effect-box'></div> {/* Efeito de Luz na Box */}
 
                                     {/* Icone */}
-                                    <div className=' items-center m-0 auto justify-center flex'>
+                                    <div className='items-center m-0 auto justify-center flex'>
                                         <Icon size={60} style={iconStyle} className='flex' />
                                     </div>
 
                                     {/* Titulo & Relatorio */}
                                     <div>
                                         {/* Estatística Numero */}
-                                        <div className='static-content'>
+                                        <div className='static-content text-center'>
                                             {res.number}
                                         </div>
 
                                         {/* Titulo simples */}
-                                        <div className='label-content'>
+                                        <div className='label-content text-center'>
                                             {res.label}
                                         </div>
                                     </div>
@@ -149,7 +149,7 @@ export default function About(): ReactElement {
                         </div>
 
                         <div className='text-center md:text-left'>
-                            <h1 style={{ width: '12em', color: '#1f1f1fe0' }} className='text-4xl md:!text-5xl'>Manutenção que dura  <span className='font-bold'>Serviço que você confia!</span></h1>
+                            <h1 className='text-4xl md:!text-5xl font-bold text-gray-800 max-w-full md:max-w-2xl mx-auto md:mx-0'>Manutenção que dura  <span className='font-bold'>Serviço que você confia!</span></h1>
 
                             <p style={{ fontSize: '17px', opacity: '90%', letterSpacing: '0.4px', lineHeight: '1.5em' }} className='mt-10'>
                                 Desde 2014, a LC Refrigeração trabalha com dedicação e transparência.

@@ -35,8 +35,8 @@ export default function Header() {
                     <div className="bg-gray-100 p-1.5 rounded-full shadow-sm">
                         <img src={LogoImg} alt="Logo" className="h-8 w-8 object-contain" />
                     </div>
-                    <div className="flex flex-col">
-                        <h1 className="text-lg font-bold text-gray-800 leading-tight">LC Refrigeração</h1>
+                    <div className="flex flex-col min-w-0">
+                        <h1 className="text-lg font-bold text-gray-800 leading-tight truncate">LC Refrigeração</h1>
                         <span className="text-[10px] font-extrabold text-sky-500 uppercase tracking-wider">
                             Reparos Especializados
                         </span>
@@ -68,7 +68,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Sidebar/Menu */}
-            <div className={`lg:hidden absolute top-full left-0 w-full bg-white shadow-xl transition-all duration-300 overflow-hidden
+            <div className={`lg:hidden absolute top-full left-0 right-0 w-full overflow-hidden bg-white shadow-xl transition-all duration-300 overflow-hidden
                 ${isOpen ? 'max-h-[500px] border-t border-gray-100' : 'max-h-0'}`}>
 
                 <ul className="p-4 space-y-1">
