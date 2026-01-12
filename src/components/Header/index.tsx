@@ -1,131 +1,97 @@
-
-import { useState, useEffect, type ReactElement } from 'react';
-import Neve from '../../assets/Logo/icon-neve.png';
-
-import { AiFillHome } from "react-icons/ai";
-import { BsBuildingsFill } from "react-icons/bs";
-import { FaTools } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import { CgMenu, CgClose, CgHomeAlt } from "react-icons/cg";
+import { PiBuildingsBold } from "react-icons/pi";
+import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { MdEmail } from "react-icons/md";
 import { FaHeadset } from "react-icons/fa";
+import LogoImg from '../../assets/Logo/icon-neve.png';
 
-const styleLiDesktop: React.CSSProperties = {
-    margin: '0 auto',
-    justifyContent: 'center',
-    display: 'flex',
-    gap: '100px',
-    fontSize: '25px',
-    alignItems: 'center'
-}
-
-const styleADesktop: React.CSSProperties = {
-    fontSize: '25px',
-    fontWeight: '400',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-}
-
-const styleButton: React.CSSProperties = {
-    display: 'flex',
-    alignItems: 'center',
-    padding: '15px',
-    borderRadius: '1em',
-    width: '150px',
-    fontSize: '25px',
-    background: 'linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(25, 195, 230, 1) 48%, rgba(33, 149, 191, 1) 100%)'
-}
-
-export default function Header(): ReactElement {
-
-    const [menuOpen, setMenuOpen] = useState<boolean>(false);
-    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
-    const [isDesktop, setIsDesktop] = useState<boolean>(screenWidth >= 1280);
+export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
-        const handleResize = (): void => {
-            setScreenWidth(window.innerWidth);
-        }
-
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize);
+        const handleScroll = () => setScrolled(window.scrollY > 20);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    useEffect(() => {
-        setIsDesktop(screenWidth >= 1280);
-    }, [screenWidth]);
-
+    const navLinks = [
+        { name: 'Página Inicial', href: '#', icon: <CgHomeAlt /> },
+        { name: 'Sobre a empresa', href: '#about', icon: <PiBuildingsBold /> },
+        { name: 'Serviços', href: '#servicos', icon: <HiOutlineWrenchScrewdriver /> },
+        { name: 'Orçamento', href: '#contact', icon: <MdEmail /> },
+        { name: 'Atendimento', href: '#atendimento', icon: <FaHeadset /> },
+    ];
 
     return (
-        <header>
-            {isDesktop ? (
-                <>
+        <header className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300
+            ${scrolled ? 'bg-white/50 backdrop-blur-sm shadow-md py-2' : 'bg-white py-4'}`}>
 
-                    <div className='barra-superior'>
-                        <div className='content-header'>
-                            <div className='shape-inc'>
-                                <a href='/'><img src={Neve} height={35} className='img-neve'></img></a>
-                                <a>LC Refrigeração</a>
-                            </div>
+            <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
 
-
-                            <ul style={{ marginTop: '12px', justifyContent: 'space-between', gap: '55px', alignItems: 'center' }}>
-                                <li className='ul-barra'><a href="https://wa.me/5511961399425" style={styleButton}>Contratar Agora</a></li>
-                                <li className='ul-barra'><a href="#" style={{ width: '85px', display: 'flex', fontSize: '25px' }}>
-                                    11 96139-9425
-                                    11 91499-0605
-                                    </a></li>
-                            </ul>
-
-                        </div>
+                {/* Logo Area */}
+                <div className="flex items-center gap-3">
+                    <div className="bg-gray-100 p-1.5 rounded-full shadow-sm">
+                        <img src={LogoImg} alt="Logo" className="h-8 w-8 object-contain" />
                     </div>
-
-                    <nav style={{ background: 'transparent' }}>
-                        <div className="menu" >
-                            <ul style={styleLiDesktop}>
-                                <li style={{ textAlign: 'center', display: 'flex', alignItems: 'center'}}>
-                                    <a href="" style={styleADesktop}><AiFillHome size={20}  style={{ marginRight: '10px' }}/>Pagina Inicial</a></li>
-                                <li><a href="#about" style={styleADesktop}><BsBuildingsFill size={20}  style={{ marginRight: '10px' }} />Sobre a Empresa</a></li>
-                                <li><a href="#servicos" style={styleADesktop}><FaTools size={20}  style={{ marginRight: '10px' }}/>O que consertamos?</a></li>
-                                <li><a href="#contact" style={styleADesktop} ><MdEmail size={20} style={{ marginRight: '10px' }}/>Solicitar Orçamento</a></li>
-                                <li><a href="#atendimento" style={styleADesktop}><FaHeadset size={20}  style={{ marginRight: '10px' }}/>Canais de Atendimento</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </>
-            ) : (
-                <nav>
-                    <div className="menu">
-                        <div className='shape-inc'>
-                            <a href='/'><img src={Neve} height={35} className='img-neve'></img></a>
-                            <a>LC Refrigeração</a>
-
-
-                            <div className="menu-contact">
-                                <ul className="contact-shape">
-                                    <li><a href="#" style={{ fontWeight: '200', fontSize: '14px', display: 'flex' }}>11 96139-9425</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        {menuOpen && (
-                            <ul className="dropdown">
-                                <li><a href="">Pagina Inicial</a></li>
-                                <li><a href="#about">Sobre a Empresa</a></li>
-                                <li><a href="#servicos">O que consertamos?</a></li>
-                                <li><a href="#contact">Solicitar Orçamento</a></li>
-                                <li><a href="#atendimento">Canais de Atendimento</a></li>
-                            </ul>
-
-                        )}
-
-                        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} id="menu-toggle">
-                            &#9776;
-                        </div>
+                    <div className="flex flex-col">
+                        <h1 className="text-lg font-bold text-gray-800 leading-tight">LC Refrigeração</h1>
+                        <span className="text-[10px] font-extrabold text-sky-500 uppercase tracking-wider">
+                            Reparos Especializados
+                        </span>
                     </div>
+                </div>
+
+                {/* Desktop Navigation */}
+                <nav className="hidden lg:block shadow p-5 rounded-full">
+                    <ul className="flex items-center gap-6 font-semibold">
+                        {navLinks.map((link) => (
+                            <li key={link.name}>
+                                <a href={link.href} className="flex font-semibold items-center gap-2 text-sm text-gray-600 hover:text-sky-500 transition-colors">
+                                    <span className="text-sky-500 text-lg">{link.icon}</span>
+                                    {link.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
                 </nav>
-            )}
+
+                {/* Mobile Menu Button */}
+                <button
+                    className="lg:hidden p-2 text-sky-500 focus:outline-none"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {isOpen ? <CgClose size={32} /> : <CgMenu size={32} />}
+                </button>
+
+            </div>
+
+            {/* Mobile Sidebar/Menu */}
+            <div className={`lg:hidden absolute top-full left-0 w-full bg-white shadow-xl transition-all duration-300 overflow-hidden
+                ${isOpen ? 'max-h-[500px] border-t border-gray-100' : 'max-h-0'}`}>
+
+                <ul className="p-4 space-y-1">
+                    {navLinks.map((link) => (
+                        <li key={link.name}>
+                            <a
+                                href={link.href}
+                                onClick={() => setIsOpen(false)}
+                                className="flex items-center gap-4 p-4 text-gray-700 hover:bg-sky-50 rounded-xl transition-all active:scale-95"
+                            >
+                                <span className="text-sky-500 text-xl">{link.icon}</span>
+                                <span className="font-semibold">{link.name}</span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+
+                <div className="p-4 pt-0">
+                    <a href="tel:11961399425" className="flex justify-center items-center w-full bg-sky-500 text-white py-4 rounded-xl font-bold shadow-lg shadow-sky-200">
+                        Ligar Agora
+                    </a>
+                </div>
+            </div>
         </header>
-    )
+    );
 }

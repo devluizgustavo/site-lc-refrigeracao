@@ -9,7 +9,7 @@ interface FormData {
     endereco: string;
     eletrodomestico: string;
     marca: string;
-    defeito: string;
+    defeito: string;    
 }
 
 const styleSelect: CSSProperties = {
