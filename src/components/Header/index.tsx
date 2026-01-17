@@ -4,6 +4,7 @@ import { PiBuildingsBold } from "react-icons/pi";
 import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { MdEmail } from "react-icons/md";
 import { FaHeadset } from "react-icons/fa";
+import { PiUsersThree } from "react-icons/pi";
 import LogoImg from '../../assets/Logo/icon-neve.png';
 
 export default function Header() {
@@ -19,9 +20,10 @@ export default function Header() {
     const navLinks = [
         { name: 'Página Inicial', href: '#', icon: <CgHomeAlt /> },
         { name: 'Sobre a empresa', href: '#about', icon: <PiBuildingsBold /> },
+        { name: 'Técnicos', href: '#tecnicos', icon: <PiUsersThree /> },
         { name: 'Serviços', href: '#servicos', icon: <HiOutlineWrenchScrewdriver /> },
-        { name: 'Orçamento', href: '#contact', icon: <MdEmail /> },
         { name: 'Atendimento', href: '#atendimento', icon: <FaHeadset /> },
+        { name: 'Orçamento', href: '#contact', icon: <MdEmail /> },
     ];
 
     return (
@@ -45,7 +47,7 @@ export default function Header() {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:block shadow p-5 rounded-full">
-                    <ul className="flex items-center gap-6 font-semibold">
+                    <ul className="flex items-center gap-10 font-semibold">
                         {navLinks.map((link) => (
                             <li key={link.name}>
                                 <a href={link.href} className="flex font-semibold items-center gap-2 text-sm text-gray-600 hover:text-sky-500 transition-colors">

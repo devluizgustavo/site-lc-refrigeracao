@@ -6,6 +6,7 @@ import Footer from './components/Footer/index.tsx';
 import Marcas from './components/Marcas/index.tsx';
 import Servicos from './components/Servicos/index.tsx';
 import WhatsApp from './components/WhatsApp/index.tsx';
+import Tecnicos from './components/Tecnicos/index.tsx';
 // import Promocao from './components/Promocao/index.tsx';
 import Atendimento from './components/Atendimento/index.tsx';
 import Avalicoes from './components/Avaliacoes/index.tsx';
@@ -19,6 +20,7 @@ function App() {
       <Hero />
       {/* <Promocao /> */}
       <About />
+      <Tecnicos />
       <Servicos />
       <Avalicoes />
       <Marcas />

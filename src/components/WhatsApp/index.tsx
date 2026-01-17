@@ -18,12 +18,12 @@ export default function WhatsApp(): ReactElement {
             {/* Balão de Mensagem */}
             <div className={`content-shape ${isClick ? 'moved' : 'notMoved'}`}>
                 <div className='bg-[#25d366] p-3 flex items-center gap-3'>
-                    <FaWhatsapp size={24} color='#fff' />
-                    <h1 className="text-white font-bold text-sm">Atendimento no Whatsapp</h1>
+                    <FaWhatsapp size={24} color='#fff'/>
+                    <h1 className="text-white font-bold text-sm md:!text-lg">Atendimento no Whatsapp</h1>
                 </div>
 
                 <div className='p-4'>
-                    <p className='text-gray-600 leading-relaxed'>
+                    <p className='md:!text-lg text-gray-600 leading-relaxed'>
                         Temos uma equipe pronta para atender você de <b>segunda a domingo a qualquer hora</b>!
                     </p>
                 </div>
