@@ -78,7 +78,7 @@ export default function Tecnicos() {
                     <h1 className="text-3xl font-semibold text-gray-800">Nosso time de atendimento</h1>
                     <p className='!text-center p-2 flex !text-lg text-gray-600'>Conheça os profissionais que irão fazer o seu atendimento.</p>
                 
-                    <div className={`p-10 text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${_atendentes.length} gap-8`}>
+                    <div className={`p-10 text-center grid grid-cols-1 md:grid-cols-${_atendentes.length} lg:grid-cols-${_atendentes.length} gap-8`}>
                         {_atendentes.map((atendente, index) => (
                             <div key={index} className='w-full max-w-md mx-auto justify-center flex-col flex items-center mt-8 shadow-lg rounded-lg p-10 '>
                                 <img
