@@ -75,7 +75,7 @@ export default function Tecnicos() {
 
                 {/* Seção de Atendimento (Sem alterações necessárias aqui) */}
                 <div className='flex-col flex justify-center items-center'>
-                    <h1 className="text-3xl font-semibold text-gray-800">Nosso time de atendimento</h1>
+                    <h1 className="text-3xl font-semibold text-gray-800 !text-center flex">Nosso time de atendimento</h1>
                     <p className='!text-center p-2 flex !text-lg text-gray-600'>Conheça os profissionais que irão fazer o seu atendimento.</p>
                 
                     <div className={`p-10 text-center grid grid-cols-1 md:grid-cols-${_atendentes.length} lg:grid-cols-${_atendentes.length} gap-8`}>
